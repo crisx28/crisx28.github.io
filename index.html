@@ -1,0 +1,1605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Maricris Rodriguez — Built on Tech. Powered by Creativity.</title>
+<meta name="description" content="Maricris Rodriguez — Senior Cloud Engineer turned creative VA. AI-powered short-form content, video editing, and content strategy for TikTok, Instagram, and Facebook Reels."/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --ocean: #0A7EA4;
+    --ocean-light: #D6EEF6;
+    --ocean-mid: #4BAAC7;
+    --sunset: #E8845A;
+    --sand: #F5EEE3;
+    --sand-dark: #E8DDD0;
+    --text: #1C2226;
+    --text-mid: #566570;
+    --text-light: #8FA3AE;
+    --white: #FDFCFA;
+    --border: rgba(10, 126, 164, 0.12);
+    --border-warm: rgba(232, 132, 90, 0.15);
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--white);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  nav {
+    position: fixed; top: 0; left: 0; right: 0;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.2rem 6%;
+    background: rgba(253,252,250,0.92);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+    z-index: 100;
+  }
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem; font-weight: 400;
+    letter-spacing: 0.04em;
+    color: var(--text); text-decoration: none;
+  }
+  .nav-logo em { font-style: italic; color: var(--ocean); }
+  .nav-tagline {
+    font-size: 0.62rem; font-weight: 400;
+    letter-spacing: 0.06em;
+    color: var(--text-light);
+    margin-left: 0.4rem;
+    display: none;
+  }
+  @media (min-width: 1100px) { .nav-tagline { display: inline; } }
+  nav ul { display: flex; gap: 2.5rem; list-style: none; }
+  nav ul a {
+    font-size: 0.8rem; font-weight: 400;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--text-mid); text-decoration: none;
+    transition: color 0.2s;
+  }
+  nav ul a:hover { color: var(--ocean); }
+  .nav-cta {
+    font-size: 0.82rem; font-weight: 500;
+    letter-spacing: 0.06em;
+    padding: 0.55rem 1.4rem;
+    background: transparent; color: var(--ocean);
+    border: 1.5px solid var(--ocean);
+    border-radius: 100px; text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+  }
+  .nav-cta:hover { background: var(--ocean); color: var(--white); }
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    align-items: center;
+    padding: 8rem 6% 5rem;
+    gap: 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; top: 0; right: 0;
+    width: 55%; height: 100%;
+    background: var(--ocean-light);
+    opacity: 0.35;
+    clip-path: ellipse(75% 90% at 100% 50%);
+    pointer-events: none;
+  }
+  .hero-left { position: relative; z-index: 1; }
+  .hero-eyebrow {
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    font-size: 0.75rem; font-weight: 500;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--ocean); margin-bottom: 1.8rem;
+  }
+  .hero-eyebrow::before {
+    content: '';
+    display: block; width: 28px; height: 1px;
+    background: var(--ocean);
+  }
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3.2rem, 6vw, 5.5rem);
+    font-weight: 300; line-height: 1.05;
+    letter-spacing: -0.01em;
+    color: var(--text); margin-bottom: 1.5rem;
+  }
+  .hero h1 em { font-style: italic; color: var(--ocean); }
+  .hero-desc {
+    font-size: 1rem; font-weight: 300;
+    color: var(--text-mid); line-height: 1.8;
+    max-width: 440px; margin-bottom: 2.5rem;
+  }
+  .hero-desc strong { color: var(--text); font-weight: 400; }
+  .hero-actions { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+  .btn-ocean {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    font-size: 0.88rem; font-weight: 500;
+    padding: 0.85rem 2rem;
+    background: var(--ocean); color: var(--white);
+    border-radius: 100px; text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .btn-ocean:hover { background: #086485; transform: translateY(-1px); }
+  .btn-ghost {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    font-size: 0.88rem; font-weight: 400;
+    padding: 0.85rem 2rem;
+    color: var(--text-mid); text-decoration: none;
+    border-radius: 100px; transition: color 0.2s;
+  }
+  .btn-ghost:hover { color: var(--ocean); }
+  .btn-ghost::after { content: ' →'; }
+  .hero-platform-list {
+    display: flex; align-items: center; gap: 1rem;
+    margin-top: 3.5rem; padding-top: 2rem;
+    border-top: 1px solid var(--border);
+    flex-wrap: wrap;
+  }
+  .hero-platform-list span {
+    font-size: 0.72rem; letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-light); font-weight: 400;
+  }
+  .platform-tag {
+    font-size: 0.78rem; font-weight: 500;
+    color: var(--text-mid);
+    padding: 0.25rem 0.75rem;
+    border: 1px solid var(--border-warm);
+    border-radius: 100px;
+    background: var(--sand);
+  }
+  .hero-right {
+    position: relative; z-index: 1;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .hero-visual {
+    width: 100%; max-width: 320px;
+    aspect-ratio: 9/16;
+    border-radius: 20px;
+    background: linear-gradient(160deg, #C8E8F2 0%, #4BAAC7 45%, #E8845A 100%);
+    position: relative; overflow: hidden;
+    box-shadow: 0 32px 64px rgba(10,126,164,0.18);
+  }
+  .bubble {
+    width: 10px; height: 10px; border-radius: 50%;
+    background: rgba(255,255,255,0.55);
+    position: absolute;
+    animation: rise linear infinite;
+  }
+  @keyframes rise {
+    from { transform: translateY(0) scale(1); opacity: 0.6; }
+    to { transform: translateY(-420px) scale(0.3); opacity: 0; }
+  }
+  .hero-visual-inner {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 3.5rem; opacity: 0.5;
+  }
+  .hero-visual-label {
+    position: absolute; bottom: 1.2rem;
+    left: 1rem; right: 1rem;
+    background: rgba(253,252,250,0.88);
+    backdrop-filter: blur(8px);
+    border-radius: 10px;
+    padding: 0.8rem 1rem;
+    display: flex; align-items: center; gap: 0.8rem;
+  }
+  .wave-icon {
+    width: 36px; height: 36px; border-radius: 8px;
+    background: var(--ocean-light);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.1rem; flex-shrink: 0;
+  }
+  .vlabel-text p:first-child { font-size: 0.78rem; font-weight: 500; color: var(--text); }
+  .vlabel-text p:last-child { font-size: 0.7rem; font-weight: 300; color: var(--text-light); }
+  /* SECTIONS */
+  section { padding: 6rem 6%; position: relative; }
+  .section-eyebrow {
+    font-size: 0.72rem; font-weight: 500;
+    letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--ocean); margin-bottom: 0.5rem;
+    display: flex; align-items: center; gap: 0.6rem;
+  }
+  .section-eyebrow::before {
+    content: ''; display: block;
+    width: 20px; height: 1px; background: var(--ocean);
+  }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    font-weight: 300; line-height: 1.1;
+    color: var(--text);
+  }
+  /* SERVICES */
+  #services { background: var(--sand); }
+  .services-intro {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 3rem; align-items: end;
+    margin-bottom: 3.5rem;
+  }
+  .services-intro p {
+    font-size: 0.95rem; font-weight: 300;
+    color: var(--text-mid); line-height: 1.8; align-self: end;
+  }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+  }
+  .service-card {
+    background: var(--white);
+    border: 1px solid var(--sand-dark);
+    border-radius: 14px; padding: 1.8rem;
+    position: relative; overflow: hidden;
+    transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  }
+  .service-card::before {
+    content: ''; position: absolute;
+    top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--ocean), var(--ocean-mid));
+    transform: scaleX(0); transform-origin: left;
+    transition: transform 0.4s ease;
+  }
+  .service-card:hover {
+    border-color: var(--ocean-light);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(10,126,164,0.1);
+  }
+  .service-card:hover::before { transform: scaleX(1); }
+  .service-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem; font-weight: 300;
+    color: var(--ocean-light); line-height: 1;
+    margin-bottom: 0.6rem;
+  }
+  .service-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem; font-weight: 400;
+    color: var(--text); margin-bottom: 0.6rem;
+  }
+  .service-card p {
+    font-size: 0.88rem; font-weight: 300;
+    color: var(--text-mid); line-height: 1.7;
+  }
+  .service-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 1.2rem; }
+  .tag {
+    font-size: 0.7rem; font-weight: 500;
+    letter-spacing: 0.04em;
+    padding: 0.2rem 0.65rem; border-radius: 100px;
+    background: var(--ocean-light); color: var(--ocean);
+    opacity: 0.85;
+  }
+  /* PORTFOLIO */
+  #portfolio { background: var(--white); }
+  .portfolio-head {
+    display: flex; justify-content: space-between;
+    align-items: flex-end; flex-wrap: wrap;
+    gap: 1rem; margin-bottom: 2.5rem;
+  }
+  .yt-archive-link {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    font-size: 0.8rem; font-weight: 400;
+    color: var(--text-light); text-decoration: none;
+    padding: 0.4rem 1rem;
+    border: 1px solid var(--sand-dark);
+    border-radius: 100px;
+    background: var(--sand);
+    margin-top: 0.6rem;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .yt-archive-link:hover { border-color: var(--sunset); color: var(--sunset); }
+  .yt-icon {
+    font-size: 0.7rem;
+    color: #FF0000;
+    opacity: 0.7;
+  }
+  .portfolio-note {
+    font-size: 0.85rem; font-weight: 300;
+    color: var(--text-light); font-style: italic;
+  }
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1rem;
+  }
+  .portfolio-card {
+    border-radius: 14px; overflow: hidden;
+    border: 1px solid var(--border);
+    background: var(--sand);
+    aspect-ratio: 9/16;
+    display: flex; flex-direction: column;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+  }
+  .portfolio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(10,126,164,0.12);
+    border-color: var(--ocean-mid);
+  }
+  .portfolio-thumb {
+    flex: 1;
+    display: flex; align-items: center; justify-content: center;
+    flex-direction: column; gap: 0.8rem;
+    position: relative; overflow: hidden;
+  }
+  .card-ocean { background: linear-gradient(160deg, #C8E8F2 0%, #4BAAC7 100%); }
+  .card-sunset { background: linear-gradient(160deg, #F5D5C0 0%, #E8845A 100%); }
+  .card-sand { background: linear-gradient(160deg, #EDE5D8 0%, #C4A98A 100%); }
+  .thumb-icon { font-size: 2rem; opacity: 0.55; }
+  .thumb-label {
+    font-size: 0.72rem; font-weight: 500;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: rgba(28,34,38,0.5);
+  }
+  .play-ring {
+    width: 48px; height: 48px; border-radius: 50%;
+    border: 1.5px solid rgba(28,34,38,0.2);
+    display: flex; align-items: center; justify-content: center;
+    background: rgba(253,252,250,0.5);
+    backdrop-filter: blur(4px); margin-top: 0.4rem;
+    transition: background 0.2s, border-color 0.2s;
+  }
+  .portfolio-card:hover .play-ring {
+    background: rgba(253,252,250,0.85);
+    border-color: var(--ocean);
+  }
+  .portfolio-meta {
+    padding: 0.9rem 1rem;
+    background: var(--white);
+    border-top: 1px solid var(--border);
+  }
+  .meta-row {
+    display: flex; justify-content: space-between;
+    align-items: center; margin-bottom: 0.2rem;
+  }
+  .meta-title { font-size: 0.85rem; font-weight: 500; color: var(--text); }
+  .meta-badge {
+    font-size: 0.68rem; font-weight: 500;
+    padding: 0.15rem 0.55rem; border-radius: 100px;
+    background: var(--ocean-light); color: var(--ocean);
+  }
+  .meta-sub { font-size: 0.75rem; font-weight: 300; color: var(--text-light); }
+  .portfolio-card-new {
+    border-radius: 14px; overflow: hidden;
+    border: 1px solid var(--border);
+    background: var(--sand);
+    display: flex; flex-direction: column;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+  }
+  .portfolio-card-new:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(10,126,164,0.12);
+    border-color: var(--ocean-mid);
+  }
+  .reel-embed-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 9/16;
+    overflow: hidden;
+    background: var(--sand);
+  }
+  .reel-embed-wrap iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    border: none;
+  }
+  /* ABOUT */
+  #about { background: var(--sand); }
+  .about-grid {
+    display: grid; grid-template-columns: 1fr 1.2fr;
+    gap: 5rem; align-items: center;
+  }
+  .about-photo {
+    aspect-ratio: 4/5; border-radius: 16px;
+    background: linear-gradient(160deg, var(--ocean-light) 0%, var(--ocean-mid) 60%, var(--sunset) 100%);
+    position: relative; overflow: hidden;
+    box-shadow: 0 24px 60px rgba(10,126,164,0.15);
+  }
+  .about-photo-placeholder {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 5rem; opacity: 0.35;
+  }
+  .about-photo-caption {
+    position: absolute; bottom: 1.2rem;
+    left: 1rem; right: 1rem;
+    background: rgba(253,252,250,0.88);
+    backdrop-filter: blur(8px);
+    border-radius: 10px; padding: 0.8rem 1rem;
+  }
+  .about-photo-caption p:first-child { font-size: 0.82rem; font-weight: 500; color: var(--text); }
+  .about-photo-caption p:last-child { font-size: 0.75rem; font-weight: 300; color: var(--text-light); }
+  .about-content h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    font-weight: 300; line-height: 1.15;
+    color: var(--text); margin: 0.5rem 0 1.4rem;
+  }
+  .about-content h2 em { font-style: italic; color: var(--ocean); }
+  .about-content p {
+    font-size: 0.95rem; font-weight: 300;
+    color: var(--text-mid); line-height: 1.85;
+    margin-bottom: 1rem;
+  }
+  .about-content p strong { color: var(--text); font-weight: 400; }
+  .about-fb-link {
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    font-size: 0.85rem; font-weight: 500;
+    color: var(--ocean); text-decoration: none;
+    padding: 0.6rem 1.2rem;
+    border: 1px solid var(--ocean); border-radius: 100px;
+    margin-top: 0.5rem;
+    transition: background 0.2s, color 0.2s;
+  }
+  .about-fb-link:hover { background: var(--ocean); color: var(--white); }
+  .about-stats {
+    display: flex; gap: 2rem;
+    margin-top: 2rem; padding-top: 2rem;
+    border-top: 1px solid var(--sand-dark);
+    flex-wrap: wrap;
+  }
+  .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.6rem; font-weight: 300;
+    color: var(--ocean); line-height: 1;
+  }
+  .stat-label {
+    font-size: 0.72rem; font-weight: 500;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--text-light); margin-top: 0.2rem;
+  }
+  /* TOOLS */
+  #tools { background: var(--white); }
+  .tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 1rem; margin-top: 2.5rem;
+  }
+  .tool-card {
+    background: var(--sand); border: 1px solid var(--sand-dark);
+    border-radius: 14px; padding: 1.5rem;
+    transition: border-color 0.3s, transform 0.3s;
+  }
+  .tool-card:hover { border-color: var(--ocean-mid); transform: translateY(-3px); }
+  .tool-icon { font-size: 1.8rem; margin-bottom: 0.8rem; }
+  .tool-name { font-size: 0.95rem; font-weight: 500; color: var(--text); margin-bottom: 0.3rem; }
+  .tool-desc { font-size: 0.82rem; font-weight: 300; color: var(--text-mid); line-height: 1.6; }
+  .tech-badges {
+    display: flex; flex-wrap: wrap; gap: 0.5rem;
+    margin-top: 1.2rem;
+  }
+  .tech-badge {
+    font-size: 0.78rem; font-weight: 500;
+    padding: 0.35rem 0.85rem;
+    border-radius: 100px;
+    border: 1px solid var(--border);
+    background: var(--white);
+    color: var(--text-mid);
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .tech-badge:hover { border-color: var(--ocean); color: var(--ocean); }
+  .tool-primary {
+    display: inline-block; font-size: 0.68rem; font-weight: 500;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 0.2rem 0.6rem; border-radius: 100px;
+    background: var(--ocean-light); color: var(--ocean); margin-top: 0.7rem;
+  }
+  /* CONTACT */
+  #contact { background: var(--ocean); text-align: center; color: var(--white); }
+  #contact .section-eyebrow { color: var(--ocean-light); justify-content: center; }
+  #contact .section-eyebrow::before { background: var(--ocean-light); }
+  .cta-box { max-width: 620px; margin: 0 auto; }
+  .cta-box h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    font-weight: 300; line-height: 1.1;
+    color: var(--white); margin: 0.5rem 0 1rem;
+  }
+  .cta-box h2 em { font-style: italic; color: var(--sand); }
+  .cta-box > p {
+    font-size: 0.95rem; font-weight: 300;
+    color: rgba(253,252,250,0.75); line-height: 1.8;
+    margin-bottom: 2.5rem;
+  }
+  .cta-actions {
+    display: flex; justify-content: center;
+    align-items: center; gap: 1rem; flex-wrap: wrap;
+  }
+  .btn-white {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    font-size: 0.88rem; font-weight: 500;
+    padding: 0.85rem 2rem;
+    background: var(--white); color: var(--ocean);
+    border-radius: 100px; text-decoration: none;
+    transition: opacity 0.2s;
+  }
+  .btn-white:hover { opacity: 0.9; }
+  .btn-outline-white {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    font-size: 0.88rem; font-weight: 400;
+    padding: 0.85rem 2rem;
+    border: 1.5px solid rgba(253,252,250,0.4);
+    color: var(--white); border-radius: 100px;
+    text-decoration: none; transition: border-color 0.2s;
+  }
+  .btn-outline-white:hover { border-color: var(--white); }
+  .cta-email { font-size: 0.82rem; color: rgba(253,252,250,0.5); margin-top: 1.5rem; }
+  .cta-email a { color: var(--sand); text-decoration: none; }
+  /* EDGE SECTION */
+  #edge { background: var(--text); color: var(--white); }
+  #edge .section-eyebrow { color: var(--ocean-mid); }
+  #edge .section-eyebrow::before { background: var(--ocean-mid); }
+  #edge .section-title { color: var(--white); margin-bottom: 0.5rem; }
+  .edge-subtitle {
+    font-size: 1rem; font-weight: 300;
+    color: rgba(253,252,250,0.6); line-height: 1.7;
+    max-width: 540px; margin-bottom: 3.5rem;
+  }
+  .edge-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1px;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 16px; overflow: hidden;
+  }
+  .edge-card {
+    background: var(--text);
+    padding: 2rem 1.8rem;
+    position: relative;
+    transition: background 0.3s;
+  }
+  .edge-card:hover { background: #252d33; }
+  .edge-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4rem; font-weight: 300;
+    color: var(--ocean-mid); opacity: 0.25;
+    line-height: 1; margin-bottom: 0.2rem;
+  }
+  .edge-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem; font-weight: 400;
+    color: var(--white); margin-bottom: 0.7rem;
+  }
+  .edge-card p {
+    font-size: 0.88rem; font-weight: 300;
+    color: rgba(253,252,250,0.6); line-height: 1.7;
+  }
+  .edge-card .edge-highlight {
+    display: inline-block;
+    font-size: 0.72rem; font-weight: 600;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--ocean-mid); margin-top: 1rem;
+  }
+  /* AI TOOLS */
+  #ai-tools { background: var(--sand); }
+  .ai-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem; margin-top: 2.5rem;
+  }
+  .ai-card {
+    background: var(--white);
+    border: 1px solid var(--sand-dark);
+    border-radius: 14px; padding: 1.4rem;
+    display: flex; flex-direction: column;
+    align-items: flex-start;
+    transition: border-color 0.3s, transform 0.3s;
+    position: relative; overflow: hidden;
+  }
+  .ai-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--ocean), var(--sunset));
+    transform: scaleX(0); transform-origin: left;
+    transition: transform 0.35s ease;
+  }
+  .ai-card:hover { border-color: var(--ocean-light); transform: translateY(-3px); }
+  .ai-card:hover::before { transform: scaleX(1); }
+  .ai-icon { font-size: 1.6rem; margin-bottom: 0.7rem; }
+  .ai-name {
+    font-size: 0.92rem; font-weight: 500; color: var(--text);
+    margin-bottom: 0.25rem;
+  }
+  .ai-use {
+    font-size: 0.78rem; font-weight: 300;
+    color: var(--text-mid); line-height: 1.55;
+    flex: 1;
+  }
+  .ai-label {
+    display: inline-block; margin-top: 0.7rem;
+    font-size: 0.68rem; font-weight: 600;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 0.18rem 0.55rem; border-radius: 100px;
+    background: var(--ocean-light); color: var(--ocean);
+  }
+  .ai-intro {
+    font-size: 0.95rem; font-weight: 300;
+    color: var(--text-mid); line-height: 1.8;
+    max-width: 560px; margin-top: 0.5rem; margin-bottom: 0.3rem;
+  }
+  .ai-value-bar {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 14px; padding: 1.4rem 1.8rem;
+    margin-top: 2rem;
+    display: flex; align-items: center; gap: 1.2rem;
+    flex-wrap: wrap;
+  }
+  .ai-value-bar p {
+    font-size: 0.88rem; font-weight: 300;
+    color: var(--text-mid); line-height: 1.65; flex: 1;
+    min-width: 220px;
+  }
+  .ai-value-bar p strong { color: var(--text); font-weight: 500; }
+  .ai-value-bar .quote-mark {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4rem; font-weight: 300;
+    color: var(--ocean-light); line-height: 0.6;
+    align-self: flex-start;
+  }
+  /* LIVE AI DEMO SECTION */
+  #live-demo {
+    background: var(--text);
+    position: relative;
+    overflow: hidden;
+  }
+  #live-demo::before {
+    content: '';
+    position: absolute; top: -120px; right: -80px;
+    width: 400px; height: 400px; border-radius: 50%;
+    background: var(--ocean);
+    opacity: 0.06; pointer-events: none;
+  }
+  #live-demo::after {
+    content: '';
+    position: absolute; bottom: -100px; left: -60px;
+    width: 300px; height: 300px; border-radius: 50%;
+    background: var(--sunset);
+    opacity: 0.06; pointer-events: none;
+  }
+  #live-demo .section-eyebrow { color: var(--ocean-mid); }
+  #live-demo .section-eyebrow::before { background: var(--ocean-mid); }
+  #live-demo .section-title { color: var(--white); }
+  .demo-subtitle {
+    font-size: 1rem; font-weight: 300;
+    color: rgba(253,252,250,0.6);
+    line-height: 1.7; max-width: 520px;
+    margin: 0.5rem 0 2.5rem;
+  }
+  .demo-subtitle em { color: var(--ocean-mid); font-style: normal; font-weight: 500; }
+  .demo-box {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+    padding: 2.5rem;
+    max-width: 780px;
+    position: relative; z-index: 1;
+  }
+  .demo-inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  .demo-input-group {
+    display: flex; flex-direction: column; gap: 0.4rem;
+  }
+  .demo-input-group label {
+    font-size: 0.72rem; font-weight: 500;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: rgba(253,252,250,0.5);
+  }
+  .demo-input-group input,
+  .demo-input-group select {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem; font-weight: 300;
+    color: var(--white);
+    outline: none;
+    transition: border-color 0.2s;
+    width: 100%;
+  }
+  .demo-input-group input::placeholder { color: rgba(253,252,250,0.25); }
+  .demo-input-group input:focus,
+  .demo-input-group select:focus {
+    border-color: var(--ocean-mid);
+  }
+  .demo-input-group select option { background: #1C2226; color: var(--white); }
+  .demo-generate-btn {
+    width: 100%;
+    padding: 1rem;
+    background: var(--ocean);
+    color: var(--white);
+    border: none;
+    border-radius: 10px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem; font-weight: 500;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: background 0.2s, transform 0.15s;
+    display: flex; align-items: center; justify-content: center; gap: 0.6rem;
+    letter-spacing: 0.02em;
+  }
+  .demo-generate-btn:hover:not(:disabled) { background: #086485; transform: translateY(-1px); }
+  .demo-generate-btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+  .demo-spinner {
+    width: 16px; height: 16px;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+    display: none;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .demo-output {
+    margin-top: 2rem;
+    display: none;
+  }
+  .demo-output.visible { display: block; }
+  .demo-output-header {
+    display: flex; align-items: center; gap: 0.8rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .demo-output-header p {
+    font-size: 0.8rem; font-weight: 300;
+    color: rgba(253,252,250,0.45);
+  }
+  .demo-output-header strong {
+    font-size: 0.88rem; font-weight: 500;
+    color: var(--ocean-mid);
+  }
+  .ai-badge-live {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    font-size: 0.7rem; font-weight: 600;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 0.25rem 0.7rem; border-radius: 100px;
+    background: rgba(75,170,199,0.15);
+    border: 1px solid rgba(75,170,199,0.3);
+    color: var(--ocean-mid);
+    white-space: nowrap;
+  }
+  .ai-badge-live::before {
+    content: '';
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--ocean-mid);
+    animation: pulse-dot 2s infinite;
+  }
+  @keyframes pulse-dot {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+  .demo-result-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .demo-result-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.09);
+    border-radius: 12px;
+    padding: 1.3rem 1.5rem;
+    position: relative;
+  }
+  .result-card-label {
+    font-size: 0.68rem; font-weight: 600;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    margin-bottom: 0.8rem;
+    display: flex; align-items: center; gap: 0.5rem;
+  }
+  .result-card-label.hooks { color: var(--sunset); }
+  .result-card-label.captions { color: var(--ocean-mid); }
+  .result-card-label.strategy { color: #B8A0E8; }
+  .result-content {
+    font-size: 0.88rem; font-weight: 300;
+    color: rgba(253,252,250,0.8);
+    line-height: 1.75;
+    white-space: pre-wrap;
+  }
+  .demo-cta-strip {
+    margin-top: 1.5rem;
+    padding: 1.2rem 1.5rem;
+    background: rgba(10,126,164,0.12);
+    border: 1px solid rgba(10,126,164,0.25);
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 1rem;
+  }
+  .demo-cta-strip p {
+    font-size: 0.88rem; font-weight: 300;
+    color: rgba(253,252,250,0.7);
+  }
+  .demo-cta-strip p strong { color: var(--white); font-weight: 500; }
+  .demo-cta-btn {
+    font-size: 0.82rem; font-weight: 500;
+    padding: 0.6rem 1.4rem;
+    background: var(--ocean);
+    color: var(--white); border-radius: 100px;
+    text-decoration: none; white-space: nowrap;
+    transition: background 0.2s;
+    border: none; cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+  }
+  .demo-cta-btn:hover { background: #086485; }
+  .demo-error {
+    color: #F09595; font-size: 0.85rem;
+    padding: 1rem; text-align: center; display: none;
+  }
+  @media (max-width: 600px) {
+    .demo-inputs { grid-template-columns: 1fr; }
+    .demo-box { padding: 1.5rem; }
+  }
+  /* ── SCROLL ANIMATIONS ── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity 0.75s cubic-bezier(0.16,1,0.3,1),
+                transform 0.75s cubic-bezier(0.16,1,0.3,1);
+  }
+  .reveal.from-left { transform: translateX(-40px); }
+  .reveal.from-right { transform: translateX(40px); }
+  .reveal.scale-in { transform: scale(0.93) translateY(20px); }
+  .reveal.visible { opacity: 1; transform: none; }
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+  .reveal-delay-4 { transition-delay: 0.4s; }
+  .reveal-delay-5 { transition-delay: 0.5s; }
+  .reveal-delay-6 { transition-delay: 0.6s; }
+  /* ── PARTICLE CANVAS ── */
+  #particle-canvas {
+    position: fixed; top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none; z-index: 0; opacity: 0.3;
+  }
+  /* ── CURSOR GLOW ── */
+  .cursor-glow {
+    width: 320px; height: 320px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(10,126,164,0.07) 0%, transparent 70%);
+    position: fixed; pointer-events: none;
+    transform: translate(-50%, -50%); z-index: 0;
+    transition: left 0.08s, top 0.08s;
+  }
+  /* ── CINEMATIC CURTAIN ── */
+  .page-curtain {
+    position: fixed; inset: 0;
+    background: #0E1520;
+    z-index: 9999;
+    display: flex; align-items: center; justify-content: center;
+    flex-direction: column; gap: 0.8rem;
+    animation: curtain-lift 1.6s cubic-bezier(0.76,0,0.24,1) 0.8s forwards;
+  }
+  @keyframes curtain-lift {
+    0%   { clip-path: inset(0 0 0% 0); }
+    100% { clip-path: inset(0 0 100% 0); }
+  }
+  .curtain-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem; font-weight: 300;
+    color: #FDFCFA; letter-spacing: 0.08em;
+    opacity: 0; animation: cfade 0.5s ease 0.2s forwards;
+  }
+  .curtain-logo em { font-style: italic; color: #4BAAC7; }
+  .curtain-tagline {
+    font-size: 0.68rem; font-weight: 400;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: rgba(253,252,250,0.35);
+    opacity: 0; animation: cfade 0.5s ease 0.45s forwards;
+  }
+  .curtain-bar {
+    width: 0; height: 1px;
+    background: linear-gradient(90deg, #0A7EA4, #E8845A);
+    animation: cgrow 0.9s ease 0.35s forwards;
+    margin-top: 0.4rem;
+  }
+  @keyframes cfade { to { opacity: 1; } }
+  @keyframes cgrow { to { width: 180px; } }
+  /* ── BOOKING SECTION ── */
+  #booking { background: var(--white); position: relative; overflow: hidden; }
+  #booking::before {
+    content: ''; position: absolute; top: -80px; right: -80px;
+    width: 350px; height: 350px; border-radius: 50%;
+    background: var(--ocean-light); opacity: 0.35; pointer-events: none;
+  }
+  .booking-grid {
+    display: grid; grid-template-columns: 1.1fr 1fr;
+    gap: 5rem; align-items: center; position: relative; z-index: 1;
+  }
+  .booking-left h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    font-weight: 300; line-height: 1.1;
+    color: var(--text); margin: 0.4rem 0 1.2rem;
+  }
+  .booking-left h2 em { font-style: italic; color: var(--ocean); }
+  .booking-left p {
+    font-size: 0.95rem; font-weight: 300;
+    color: var(--text-mid); line-height: 1.8; margin-bottom: 0.8rem;
+  }
+  .booking-perks { display: flex; flex-direction: column; gap: 0.7rem; margin-top: 1.5rem; }
+  .booking-perk {
+    display: flex; align-items: flex-start; gap: 0.8rem;
+    font-size: 0.88rem; font-weight: 300; color: var(--text-mid);
+  }
+  .perk-dot {
+    width: 20px; height: 20px; border-radius: 50%;
+    background: var(--ocean-light); flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.6rem; color: var(--ocean); font-weight: 700; margin-top: 2px;
+  }
+  .booking-card {
+    background: var(--sand); border: 1px solid var(--sand-dark);
+    border-radius: 20px; padding: 2.2rem;
+    box-shadow: 0 20px 50px rgba(10,126,164,0.08);
+    text-align: center;
+  }
+  .booking-avatar {
+    width: 68px; height: 68px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--ocean-light), var(--ocean-mid));
+    margin: 0 auto 0.9rem;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem; font-weight: 400; color: var(--white);
+  }
+  .booking-card-name { font-size: 1rem; font-weight: 500; color: var(--text); margin-bottom: 0.2rem; }
+  .booking-card-role { font-size: 0.75rem; font-weight: 300; color: var(--text-light); margin-bottom: 1.4rem; }
+  .booking-details { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.6rem; text-align: left; }
+  .booking-detail-row {
+    display: flex; align-items: center; gap: 0.75rem;
+    padding: 0.6rem 0.9rem;
+    background: var(--white); border-radius: 10px;
+    border: 1px solid var(--sand-dark);
+  }
+  .bd-icon { font-size: 1rem; flex-shrink: 0; }
+  .bd-label {
+    font-size: 0.68rem; font-weight: 500; letter-spacing: 0.07em;
+    text-transform: uppercase; color: var(--text-light); display: block;
+  }
+  .bd-value { font-size: 0.83rem; font-weight: 400; color: var(--text); }
+  .btn-book {
+    display: flex; align-items: center; justify-content: center; gap: 0.6rem;
+    width: 100%; padding: 0.95rem;
+    background: var(--ocean); color: var(--white);
+    border-radius: 12px; text-decoration: none;
+    font-size: 0.9rem; font-weight: 500;
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+    font-family: 'DM Sans', sans-serif;
+  }
+  .btn-book:hover {
+    background: #086485; transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(10,126,164,0.25);
+  }
+  .booking-note { font-size: 0.72rem; font-weight: 300; color: var(--text-light); margin-top: 0.9rem; }
+  @media (max-width: 800px) { .booking-grid { grid-template-columns: 1fr; gap: 2.5rem; } }
+  /* FOOTER */
+  footer {
+    padding: 1.5rem 6%;
+    display: flex; justify-content: space-between;
+    align-items: center; flex-wrap: wrap; gap: 0.5rem;
+    border-top: 1px solid var(--border);
+    background: var(--white);
+  }
+  footer p { font-size: 0.75rem; font-weight: 300; color: var(--text-light); }
+  footer a { font-size: 0.75rem; color: var(--text-light); text-decoration: none; transition: color 0.2s; }
+  footer a:hover { color: var(--ocean); }
+  footer .links { display: flex; gap: 1.4rem; }
+  @media (max-width: 800px) {
+    .hero { grid-template-columns: 1fr; padding-top: 6rem; }
+    .hero-right { display: none; }
+    nav ul { display: none; }
+    .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .services-intro { grid-template-columns: 1fr; }
+    .portfolio-head { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+<canvas id="particle-canvas"></canvas>
+<div class="cursor-glow" id="cursor-glow"></div>
+<div class="page-curtain">
+  <div class="curtain-logo">Maricris <em>Rodriguez</em></div>
+  <div class="curtain-tagline">Built on Tech. Powered by Creativity.</div>
+  <div class="curtain-bar"></div>
+</div>
+<nav>
+  <a href="#" class="nav-logo">Maricris <em>Rodriguez</em> <span class="nav-tagline">Built on Tech. Powered by Creativity.</span></a>
+  <ul>
+    <li><a href="#live-demo">AI Demo</a></li>
+    <li><a href="#booking">Book a Call</a></li>
+    <li><a href="#edge">Why Me</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#portfolio">Work</a></li>
+    <li><a href="#tools">Tools</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Hire Me</a>
+</nav>
+<section class="hero">
+  <div class="hero-left">
+    <p class="hero-eyebrow">Built on Tech. Powered by Creativity.</p>
+    <h1>
+      The VA who<br>
+      thinks in<br>
+      <em>systems.</em>
+    </h1>
+    <p class="hero-desc">
+      Hi, I'm <strong>Maricris</strong> — a Senior Cloud Engineer turned creative VA. I combine 10+ years of tech discipline, an AI-powered workflow, and real content creation experience to deliver work that most VAs simply can't match.
+    </p>
+    <div class="hero-actions">
+      <a href="#portfolio" class="btn-ocean">View My Work</a>
+      <a href="#contact" class="btn-ghost">Let's Collaborate</a>
+    </div>
+    <div class="hero-platform-list">
+      <span>Platforms</span>
+      <div class="platform-tag">TikTok</div>
+      <div class="platform-tag">Instagram Reels</div>
+      <div class="platform-tag">Facebook Reels</div>
+      <div class="platform-tag">☁️ Cloud / SRE</div>
+      <div class="platform-tag">🤖 AI-Powered</div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-visual">
+      <div class="bubble" style="left:15%;bottom:8%;width:6px;height:6px;animation-duration:4s;animation-delay:0s;"></div>
+      <div class="bubble" style="left:40%;bottom:5%;width:10px;height:10px;animation-duration:6s;animation-delay:1s;"></div>
+      <div class="bubble" style="left:65%;bottom:18%;width:7px;height:7px;animation-duration:5s;animation-delay:2s;"></div>
+      <div class="bubble" style="left:80%;bottom:10%;width:5px;height:5px;animation-duration:7s;animation-delay:0.5s;"></div>
+      <div class="bubble" style="left:28%;bottom:15%;width:8px;height:8px;animation-duration:5.5s;animation-delay:1.5s;"></div>
+      <div class="hero-visual-inner">🤿</div>
+      <div class="hero-visual-label">
+        <div class="wave-icon">🌊</div>
+        <div class="vlabel-text">
+          <p>Maricris Rodriguez</p>
+          <p>Tech VA · Editor · AI Workflow · PH 🇵🇭</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="services">
+  <div class="services-intro">
+    <div>
+      <p class="section-eyebrow reveal">What I Do</p>
+      <h2 class="section-title reveal reveal-delay-1">Services</h2>
+    </div>
+    <p>Not just edits — strategic short-form content built with AI-assisted scripting, tech-grade precision, and a creative eye trained on real audience engagement.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-num">01</div>
+      <h3>TikTok Videos</h3>
+      <p>Trend-aware edits with dynamic cuts, trending audio, and hooks that make people stop mid-scroll.</p>
+      <div class="service-tags">
+        <span class="tag">Trending Audio</span>
+        <span class="tag">Text Overlays</span>
+        <span class="tag">Transitions</span>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-num">02</div>
+      <h3>Instagram Reels</h3>
+      <p>Aesthetically refined Reels with color grading, smooth B-roll, and visual storytelling that matches your brand.</p>
+      <div class="service-tags">
+        <span class="tag">Color Grading</span>
+        <span class="tag">B-Roll</span>
+        <span class="tag">Brand Consistency</span>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-num">03</div>
+      <h3>Facebook Reels</h3>
+      <p>Subtitled, mobile-first clips engineered for Facebook's feed — engaging from the first frame to the last.</p>
+      <div class="service-tags">
+        <span class="tag">Subtitles</span>
+        <span class="tag">Mobile-First</span>
+        <span class="tag">Captions</span>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-num">04</div>
+      <h3>AI-Assisted Content Strategy</h3>
+      <p>Hook writing, caption generation, content calendars, and script outlines — powered by AI and guided by 10+ years of systems thinking.</p>
+      <div class="service-tags">
+        <span class="tag">Hook Writing</span>
+        <span class="tag">AI Captions</span>
+        <span class="tag">Content Planning</span>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="edge">
+  <p class="section-eyebrow">The Difference</p>
+  <h2 class="section-title">Why I'm not your<br>average VA.</h2>
+  <p class="edge-subtitle">Most VAs edit videos. I engineer content — with a decade of tech discipline, AI as my co-pilot, and a proven track record as a creator myself.</p>
+  <div class="edge-grid">
+    <div class="edge-card">
+      <div class="edge-number">01</div>
+      <h3>10+ Years in Tech</h3>
+      <p>I'm a Senior Cloud Infrastructure Engineer by profession. That means I show up on time, communicate clearly, hit deadlines, and never disappear mid-project. Reliability isn't a pitch — it's how I'm wired.</p>
+      <span class="edge-highlight">Azure · AWS · Kubernetes · SRE</span>
+    </div>
+    <div class="edge-card">
+      <div class="edge-number">02</div>
+      <h3>AI-Powered Workflow</h3>
+      <p>I use ChatGPT, Claude, Gemini, and CapCut AI daily — to write sharper hooks, generate captions faster, brainstorm content angles, and streamline every edit. You get more output, faster, without cutting corners.</p>
+      <span class="edge-highlight">ChatGPT · Claude · Gemini · CapCut AI</span>
+    </div>
+    <div class="edge-card">
+      <div class="edge-number">03</div>
+      <h3>I'm a Creator Too</h3>
+      <p>Scuba Snacks Sunsets isn't a demo reel — it's my own page where I create, edit, and publish content. I understand what it's like to be on your side of the camera. I edit with the creator's perspective, not just a technician's.</p>
+      <span class="edge-highlight">Real content · Real audience · Real results</span>
+    </div>
+  </div>
+</section>
+<section id="ai-tools">
+  <p class="section-eyebrow">AI-Powered Workflow</p>
+  <h2 class="section-title">Tools that multiply output.</h2>
+  <p class="ai-intro">I integrate AI across every stage of the content process — from ideation to final edit — so you get faster delivery, sharper copy, and better-performing content.</p>
+  <div class="ai-grid">
+    <div class="ai-card">
+      <div class="ai-icon">🤖</div>
+      <div class="ai-name">ChatGPT</div>
+      <div class="ai-use">Hook writing, video scripts, caption drafts, content calendar brainstorming.</div>
+      <span class="ai-label">Scripting</span>
+    </div>
+    <div class="ai-card">
+      <div class="ai-icon">🧠</div>
+      <div class="ai-name">Claude AI</div>
+      <div class="ai-use">Long-form content strategy, client briefs, polished copy, and workflow planning.</div>
+      <span class="ai-label">Strategy</span>
+    </div>
+    <div class="ai-card">
+      <div class="ai-icon">💎</div>
+      <div class="ai-name">Gemini</div>
+      <div class="ai-use">Research, trend discovery, hashtag strategies, and audience insight generation.</div>
+      <span class="ai-label">Research</span>
+    </div>
+    <div class="ai-card">
+      <div class="ai-icon">✂️</div>
+      <div class="ai-name">CapCut AI</div>
+      <div class="ai-use">Auto-captions, AI cutout, smart transitions, and template generation built into the edit.</div>
+      <span class="ai-label">Editing</span>
+    </div>
+    <div class="ai-card">
+      <div class="ai-icon">🎨</div>
+      <div class="ai-name">Canva AI</div>
+      <div class="ai-use">Thumbnail generation, text overlays, branded graphics, and visual assets — fast.</div>
+      <span class="ai-label">Visuals</span>
+    </div>
+    <div class="ai-card">
+      <div class="ai-icon">☁️</div>
+      <div class="ai-name">Azure / Cloud</div>
+      <div class="ai-use">10+ years managing cloud infrastructure — I'm comfortable with tech tools most VAs have never touched.</div>
+      <span class="ai-label">Tech Edge</span>
+    </div>
+  </div>
+  <div class="ai-value-bar">
+    <div class="quote-mark">"</div>
+    <p>My AI workflow doesn't replace creativity — it <strong>removes friction</strong>. You get faster turnaround, more polished hooks, consistent captions, and a VA who understands how systems work. <strong>That's the tech advantage.</strong></p>
+  </div>
+</section>
+<section id="live-demo">
+  <p class="section-eyebrow">Live AI Demo</p>
+  <h2 class="section-title">Try my AI workflow.<br>Right now.</h2>
+  <p class="demo-subtitle">
+    Enter your brand and niche — and watch me generate real hooks, captions,
+    and a content strategy for you. <em>Instantly. For free.</em> This is what I do for every client.
+  </p>
+  <div class="demo-box">
+    <div class="demo-inputs">
+      <div class="demo-input-group">
+        <label>Your Brand / Page Name</label>
+        <input type="text" id="demo-brand" placeholder="e.g. Scuba Snacks Sunsets" maxlength="60"/>
+      </div>
+      <div class="demo-input-group">
+        <label>Your Niche / Content Type</label>
+        <input type="text" id="demo-niche" placeholder="e.g. travel, food, fitness, lifestyle" maxlength="60"/>
+      </div>
+      <div class="demo-input-group">
+        <label>Platform</label>
+        <select id="demo-platform">
+          <option value="TikTok">TikTok</option>
+          <option value="Instagram Reels">Instagram Reels</option>
+          <option value="Facebook Reels" selected>Facebook Reels</option>
+        </select>
+      </div>
+      <div class="demo-input-group">
+        <label>Tone / Vibe</label>
+        <select id="demo-tone">
+          <option value="fun and energetic">Fun & Energetic</option>
+          <option value="clean and cinematic" selected>Clean & Cinematic</option>
+          <option value="educational and informative">Educational</option>
+          <option value="emotional and inspiring">Emotional & Inspiring</option>
+          <option value="casual and authentic">Casual & Authentic</option>
+        </select>
+      </div>
+    </div>
+    <button class="demo-generate-btn" id="demo-btn" onclick="runDemo()">
+      <div class="demo-spinner" id="demo-spinner"></div>
+      <span id="demo-btn-text">✦ Generate My Content Ideas</span>
+    </button>
+    <p class="demo-error" id="demo-error">Something went wrong. Please try again.</p>
+    <div class="demo-output" id="demo-output">
+      <div class="demo-output-header">
+        <span class="ai-badge-live">AI Generated</span>
+        <div>
+          <strong id="output-brand-name"></strong>
+          <p id="output-meta"></p>
+        </div>
+      </div>
+      <div class="demo-result-grid">
+        <div class="demo-result-card">
+          <div class="result-card-label hooks">🎣 Video Hooks</div>
+          <div class="result-content" id="result-hooks"></div>
+        </div>
+        <div class="demo-result-card">
+          <div class="result-card-label captions">💬 Caption Ideas</div>
+          <div class="result-content" id="result-captions"></div>
+        </div>
+        <div class="demo-result-card">
+          <div class="result-card-label strategy">📅 Content Strategy Tip</div>
+          <div class="result-content" id="result-strategy"></div>
+        </div>
+      </div>
+      <div class="demo-cta-strip">
+        <p><strong>Like what you see?</strong> Imagine this for every single video, every week — handled.</p>
+        <a href="#booking" class="demo-cta-btn">📅 Book a Free Discovery Call</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="portfolio">
+  <div class="portfolio-head">
+    <div>
+      <p class="section-eyebrow">Selected Work</p>
+      <h2 class="section-title">Content that performs.</h2>
+      <a href="https://www.facebook.com/ScubaSnacksSunsets/" target="_blank" rel="noopener" class="yt-archive-link">
+        <span class="yt-icon">▶</span> Watch the full archive on Facebook
+      </a>
+    </div>
+    <p class="portfolio-note">Real edits from Scuba Snacks Sunsets &amp; client projects.</p>
+  </div>
+  <div class="portfolio-grid">
+    <div class="portfolio-card">
+      <div class="portfolio-thumb card-ocean">
+        <div class="thumb-icon">🌊</div>
+        <div class="thumb-label">Travel Reel</div>
+        <div class="play-ring">▶</div>
+      </div>
+      <div class="portfolio-meta">
+        <div class="meta-row">
+          <span class="meta-title">Sunset Dive Series</span>
+          <span class="meta-badge">Reel</span>
+        </div>
+        <p class="meta-sub">Facebook · Cinematic edit</p>
+      </div>
+    </div>
+    <div class="portfolio-card">
+      <div class="portfolio-thumb card-sunset">
+        <div class="thumb-icon">🍽️</div>
+        <div class="thumb-label">Food &amp; Lifestyle</div>
+        <div class="play-ring">▶</div>
+      </div>
+      <div class="portfolio-meta">
+        <div class="meta-row">
+          <span class="meta-title">Snack Break Cuts</span>
+          <span class="meta-badge">TikTok</span>
+        </div>
+        <p class="meta-sub">Trending audio · Fast cuts</p>
+      </div>
+    </div>
+    <div class="portfolio-card">
+      <div class="portfolio-thumb card-sand">
+        <div class="thumb-icon">🏝️</div>
+        <div class="thumb-label">Destination</div>
+        <div class="play-ring">▶</div>
+      </div>
+      <div class="portfolio-meta">
+        <div class="meta-row">
+          <span class="meta-title">Island Guide</span>
+          <span class="meta-badge">Reel</span>
+        </div>
+        <p class="meta-sub">Instagram · B-roll + captions</p>
+      </div>
+    </div>
+    <div class="portfolio-card">
+      <div class="portfolio-thumb card-ocean">
+        <div class="thumb-icon">🐠</div>
+        <div class="thumb-label">Underwater</div>
+        <div class="play-ring">▶</div>
+      </div>
+      <div class="portfolio-meta">
+        <div class="meta-row">
+          <span class="meta-title">Reef Moments</span>
+          <span class="meta-badge">Reel</span>
+        </div>
+        <p class="meta-sub">Facebook · Color graded</p>
+      </div>
+    </div>
+    <div class="portfolio-card">
+      <div class="portfolio-thumb card-sunset">
+        <div class="thumb-icon">🌅</div>
+        <div class="thumb-label">Golden Hour</div>
+        <div class="play-ring">▶</div>
+      </div>
+      <div class="portfolio-meta">
+        <div class="meta-row">
+          <span class="meta-title">Sunset Stories</span>
+          <span class="meta-badge">TikTok</span>
+        </div>
+        <p class="meta-sub">Text overlays · Transitions</p>
+      </div>
+    </div>
+    <div class="portfolio-card">
+      <div class="portfolio-thumb card-sand">
+        <div class="thumb-icon">☕</div>
+        <div class="thumb-label">Lifestyle</div>
+        <div class="play-ring">▶</div>
+      </div>
+      <div class="portfolio-meta">
+        <div class="meta-row">
+          <span class="meta-title">Daily Vlog Cut</span>
+          <span class="meta-badge">Reel</span>
+        </div>
+        <p class="meta-sub">Instagram · Subtitled</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="about">
+  <div class="about-grid">
+    <div class="about-photo">
+      <div class="about-photo-placeholder">🤿</div>
+      <div class="about-photo-caption">
+        <p>Maricris Rodriguez</p>
+        <p>Cloud Engineer · Creative VA · Content Creator</p>
+      </div>
+    </div>
+    <div class="about-content">
+      <p class="section-eyebrow">About Me</p>
+      <h2>A rare mix of <em>engineer</em> and <em>creative</em>.</h2>
+      <p>For over a decade, I've worked as a <strong>Senior Cloud Infrastructure Engineer</strong> — building, automating, and maintaining systems that businesses depend on every single day. That world taught me precision, reliability, and how to solve problems under pressure.</p>
+      <p>But I've always had a creative side. Through <strong>Scuba Snacks Sunsets</strong>, my own content page, I discovered a love for editing, storytelling, and building an audience — and I realized my tech background gives me an unfair advantage as a VA.</p>
+      <p>Today I bring both worlds together: the <strong>discipline of an engineer</strong> and the <strong>eye of a creator</strong>, supercharged with an AI-powered workflow. That's what you get when you work with me.</p>
+      <a href="https://www.facebook.com/ScubaSnacksSunsets/" target="_blank" rel="noopener" class="about-fb-link">
+        🌊 Visit Scuba Snacks Sunsets
+      </a>
+      <div class="about-stats">
+        <div>
+          <div class="stat-num">10+</div>
+          <div class="stat-label">Years in Tech</div>
+        </div>
+        <div>
+          <div class="stat-num">6+</div>
+          <div class="stat-label">AI Tools Daily</div>
+        </div>
+        <div>
+          <div class="stat-num">100%</div>
+          <div class="stat-label">Reliable Delivery</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="tools">
+  <p class="section-eyebrow">Tech &amp; Editing Stack</p>
+  <h2 class="section-title">The tools behind the work.</h2>
+  <div class="tools-grid">
+    <div class="tool-card">
+      <div class="tool-icon">✂️</div>
+      <div class="tool-name">CapCut</div>
+      <div class="tool-desc">My primary editor for short-form — cuts, captions, effects, and AI-assisted templates.</div>
+      <span class="tool-primary">Primary Editor</span>
+    </div>
+    <div class="tool-card">
+      <div class="tool-icon">🎬</div>
+      <div class="tool-name">Adobe Premiere</div>
+      <div class="tool-desc">For advanced edits, precise timelines, and polished long-form or client deliverables.</div>
+    </div>
+    <div class="tool-card">
+      <div class="tool-icon">🎨</div>
+      <div class="tool-name">Canva</div>
+      <div class="tool-desc">Thumbnails, branded graphics, text overlays, and quick visual assets.</div>
+    </div>
+    <div class="tool-card">
+      <div class="tool-icon">☁️</div>
+      <div class="tool-name">Azure &amp; AWS</div>
+      <div class="tool-desc">A decade of cloud infrastructure — the tech backbone most VAs don't have.</div>
+    </div>
+  </div>
+  <div class="tech-badges">
+    <span class="tech-badge">CapCut</span>
+    <span class="tech-badge">Premiere Pro</span>
+    <span class="tech-badge">Canva</span>
+    <span class="tech-badge">ChatGPT</span>
+    <span class="tech-badge">Claude</span>
+    <span class="tech-badge">Gemini</span>
+    <span class="tech-badge">Azure</span>
+    <span class="tech-badge">AWS</span>
+    <span class="tech-badge">Kubernetes</span>
+    <span class="tech-badge">Notion</span>
+    <span class="tech-badge">Google Workspace</span>
+  </div>
+</section>
+<section id="booking">
+  <div class="booking-grid">
+    <div class="booking-left">
+      <p class="section-eyebrow">Let's Talk</p>
+      <h2>Book a free <em>discovery call</em>.</h2>
+      <p>Curious if we're a good fit? Let's hop on a quick call. I'll learn about your brand, your goals, and show you exactly how my AI-powered workflow can take content off your plate.</p>
+      <div class="booking-perks">
+        <div class="booking-perk"><span class="perk-dot">✓</span> No pressure, no obligation — just a real conversation.</div>
+        <div class="booking-perk"><span class="perk-dot">✓</span> Walk away with at least one actionable content idea.</div>
+        <div class="booking-perk"><span class="perk-dot">✓</span> Learn how I combine tech discipline with creative editing.</div>
+      </div>
+    </div>
+    <div class="booking-card">
+      <div class="booking-avatar">MR</div>
+      <div class="booking-card-name">Maricris Rodriguez</div>
+      <div class="booking-card-role">Tech VA · Video Editor · AI Workflow</div>
+      <div class="booking-details">
+        <div class="booking-detail-row">
+          <span class="bd-icon">⏱️</span>
+          <div>
+            <span class="bd-label">Duration</span>
+            <span class="bd-value">30 minutes</span>
+          </div>
+        </div>
+        <div class="booking-detail-row">
+          <span class="bd-icon">💻</span>
+          <div>
+            <span class="bd-label">Format</span>
+            <span class="bd-value">Zoom / Google Meet</span>
+          </div>
+        </div>
+        <div class="booking-detail-row">
+          <span class="bd-icon">💬</span>
+          <div>
+            <span class="bd-label">Focus</span>
+            <span class="bd-value">Your content goals</span>
+          </div>
+        </div>
+      </div>
+      <a href="mailto:maricris.rodriguez28@gmail.com?subject=Discovery%20Call%20Request&body=Hi%20Maricris%2C%20I'd%20love%20to%20book%20a%20discovery%20call!" class="btn-book">📅 Request My Free Call</a>
+      <p class="booking-note">Usually responds within 24 hours.</p>
+    </div>
+  </div>
+</section>
+<section id="contact">
+  <p class="section-eyebrow">Get In Touch</p>
+  <div class="cta-box">
+    <h2>Let's build something <em>worth watching</em>.</h2>
+    <p>Whether you need a reliable editor, a strategic content partner, or a VA who actually understands technology — I'm ready to help your brand show up and stand out.</p>
+    <div class="cta-actions">
+      <a href="mailto:maricris.rodriguez28@gmail.com?subject=Let's%20Work%20Together" class="btn-white">✉️ Email Me</a>
+      <a href="https://www.facebook.com/ScubaSnacksSunsets/" target="_blank" rel="noopener" class="btn-outline-white">🌊 View My Facebook Page</a>
+    </div>
+    <p class="cta-email">Or reach me directly at <a href="mailto:maricris.rodriguez28@gmail.com">maricris.rodriguez28@gmail.com</a></p>
+  </div>
+</section>
+<footer>
+  <p>© 2026 Maricris Rodriguez · Built on Tech. Powered by Creativity.</p>
+  <div class="links">
+    <a href="#services">Services</a>
+    <a href="#portfolio">Work</a>
+    <a href="#booking">Book a Call</a>
+    <a href="https://www.facebook.com/ScubaSnacksSunsets/" target="_blank" rel="noopener">Facebook</a>
+  </div>
+</footer>
+<script>
+// ── CURSOR GLOW
+const glow = document.getElementById('cursor-glow');
+if (glow) {
+  document.addEventListener('mousemove', e => {
+    glow.style.left = e.clientX + 'px';
+    glow.style.top = e.clientY + 'px';
+  });
+}
+// ── SCROLL REVEAL
+const revealEls = document.querySelectorAll('.reveal');
+const revealObs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+revealEls.forEach(el => revealObs.observe(el));
+// ── PARTICLE CANVAS
+(function() {
+  const canvas = document.getElementById('particle-canvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  let W, H, particles = [];
+  function resize() { W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; }
+  resize();
+  window.addEventListener('resize', resize);
+  function Particle() { this.reset = function() {
+    this.x = Math.random() * W; this.y = Math.random() * H;
+    this.r = Math.random() * 1.6 + 0.3;
+    this.sx = (Math.random() - 0.5) * 0.25; this.sy = -Math.random() * 0.35 - 0.08;
+    this.a = Math.random() * 0.35 + 0.05;
+    this.c = Math.random() > 0.5 ? '10,126,164' : '232,132,90';
+  }; this.reset(); this.y = Math.random() * H; }
+  for (let i = 0; i < 70; i++) { const p = new Particle(); particles.push(p); }
+  function loop() {
+    ctx.clearRect(0, 0, W, H);
+    particles.forEach(p => {
+      p.x += p.sx; p.y += p.sy;
+      if (p.y < -10) p.reset();
+      ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(' + p.c + ',' + p.a + ')'; ctx.fill();
+    });
+    requestAnimationFrame(loop);
+  }
+  loop();
+})();
+// ── ACTIVE NAV HIGHLIGHT
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('nav ul a');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(s => { if (window.scrollY >= s.offsetTop - 130) current = s.id; });
+  navLinks.forEach(a => {
+    a.style.color = a.getAttribute('href') === '#' + current ? 'var(--ocean)' : '';
+  });
+}, { passive: true });
+// ── AI DEMO
+async function runDemo() {
+  const brand = document.getElementById('demo-brand').value.trim();
+  const niche = document.getElementById('demo-niche').value.trim();
+  const platform = document.getElementById('demo-platform').value;
+  const tone = document.getElementById('demo-tone').value;
+  const errorEl = document.getElementById('demo-error');
+  if (!brand || !niche) {
+    errorEl.textContent = 'Please fill in your brand name and niche first!';
+    errorEl.style.display = 'block'; return;
+  }
+  const btn = document.getElementById('demo-btn');
+  const spinner = document.getElementById('demo-spinner');
+  const btnText = document.getElementById('demo-btn-text');
+  const output = document.getElementById('demo-output');
+  btn.disabled = true; spinner.style.display = 'block';
+  btnText.textContent = 'Generating your content ideas...';
+  output.classList.remove('visible'); errorEl.style.display = 'none';
+  const prompt = 'You are a social media content strategist. A client brand is called "' + brand + '" and their niche is "' + niche + '". They post on ' + platform + ' with a ' + tone + ' tone. Respond ONLY with valid JSON, no markdown:\n{"hooks":"3 numbered scroll-stopping video hook ideas, each on its own line","captions":"3 numbered caption ideas with emojis and CTA, each on its own line","strategy":"1 sharp content strategy tip (2-3 sentences)"}';
+  try {
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ model: 'claude-sonnet-4-20250514', max_tokens: 1000, messages: [{ role: 'user', content: prompt }] })
+    });
+    const data = await res.json();
+    const raw = (data.content?.[0]?.text || '').replace(/```json|```/g, '').trim();
+    const parsed = JSON.parse(raw);
+    document.getElementById('output-brand-name').textContent = brand;
+    document.getElementById('output-meta').textContent = platform + ' · ' + tone + ' · ' + niche;
+    document.getElementById('result-hooks').textContent = parsed.hooks;
+    document.getElementById('result-captions').textContent = parsed.captions;
+    document.getElementById('result-strategy').textContent = parsed.strategy;
+    output.classList.add('visible');
+  } catch(e) {
+    errorEl.textContent = 'Something went wrong — please try again.';
+    errorEl.style.display = 'block';
+  } finally {
+    btn.disabled = false; spinner.style.display = 'none';
+    btnText.textContent = '✦ Generate Again';
+  }
+}
+document.getElementById('demo-brand')?.addEventListener('keydown', e => { if(e.key==='Enter') runDemo(); });
+document.getElementById('demo-niche')?.addEventListener('keydown', e => { if(e.key==='Enter') runDemo(); });
+</script>
+</body>
+</html>
