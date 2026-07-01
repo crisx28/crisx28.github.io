@@ -357,6 +357,17 @@
   .price-note { text-align: center; font-family: var(--mono); font-size: 0.7rem; color: var(--text-mute); margin-top: 2rem; }
   /* console tilt */
   .hero .console { transition: transform 0.18s cubic-bezier(0.16,1,0.3,1); transform-style: preserve-3d; }
+  /* ══ HIGHLIGHT SWEEP (visual pair for the highlight sound) ══ */
+  .cell, .work-row, .tst-card, .approach-card, .pipe-step { overflow: hidden; }
+  .cell::after, .work-row::after, .tst-card::after, .approach-card::after, .pipe-step::after {
+    content: ''; position: absolute; top: 0; left: -75%; width: 50%; height: 100%;
+    background: linear-gradient(100deg, transparent, rgba(53,208,224,0.14), transparent);
+    transform: skewX(-18deg); pointer-events: none; opacity: 0; z-index: 1;
+  }
+  .cell:hover::after, .work-row:hover::after, .tst-card:hover::after, .approach-card:hover::after, .pipe-step:hover::after { animation: sweep 0.6s ease; }
+  @keyframes sweep { 0% { left: -75%; opacity: 0; } 12% { opacity: 1; } 100% { left: 135%; opacity: 0; } }
+  .cell > *, .pipe-step > *, .approach-card > * { position: relative; z-index: 2; }
+  @media (prefers-reduced-motion: reduce) { .cell::after, .work-row::after, .tst-card::after, .approach-card::after, .pipe-step::after { display: none; } }
   /* ══ FOOTER ══ */
   footer { border-top: 1px solid var(--border); padding: 2rem 0; }
   .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
@@ -1025,12 +1036,17 @@ var SFX = (function(){
     s.connect(f).connect(g).connect(ctx.destination); s.start(t); s.stop(t + o.dur);
   }
   return {
-    hover: function(){ tone({ freq: 2000, dur: 0.03, type: 'sine', gain: 0.012 }); },
-    click: function(){ tone({ freq: 620, slideTo: 900, dur: 0.09, type: 'triangle', gain: 0.045 }); },
-    whoosh: function(){ noise({ dur: 0.28, gain: 0.015 }); },
+    hover: function(){ tone({ freq: 900, slideTo: 1500, dur: 0.06, type: 'triangle', gain: 0.03 }); },
+    highlight: function(){
+      tone({ freq: 760, slideTo: 1720, dur: 0.14, type: 'triangle', gain: 0.05 });
+      tone({ freq: 1500, slideTo: 2700, dur: 0.10, type: 'sine', gain: 0.03, delay: 0.015 });
+      noise({ dur: 0.13, gain: 0.022 });
+    },
+    click: function(){ tone({ freq: 620, slideTo: 940, dur: 0.09, type: 'triangle', gain: 0.05 }); },
+    whoosh: function(){ noise({ dur: 0.28, gain: 0.016 }); },
     success: function(){ tone({ freq: 523, dur: 0.12, gain: 0.05 }); tone({ freq: 784, dur: 0.16, gain: 0.05, delay: 0.1 }); tone({ freq: 1046, dur: 0.2, gain: 0.045, delay: 0.2 }); },
     error: function(){ tone({ freq: 220, slideTo: 150, dur: 0.18, type: 'sawtooth', gain: 0.03 }); },
-    set: function(v){ enabled = v; localStorage.setItem('sfx', v ? 'on' : 'off'); if (v){ ensure(); tone({ freq: 880, dur: 0.1, gain: 0.05 }); } },
+    set: function(v){ enabled = v; localStorage.setItem('sfx', v ? 'on' : 'off'); if (v){ ensure(); tone({ freq: 760, slideTo: 1720, dur: 0.14, type: 'triangle', gain: 0.05 }); noise({ dur: 0.13, gain: 0.022 }); } },
     on: function(){ return enabled; }, wake: ensure
   };
 })();
@@ -1048,10 +1064,15 @@ window.SFX = SFX;
 
 // hover + click sounds on interactive elements
 (function(){
-  var sel = 'a, button, input, select, .work-row, .cell, .approach-card, .tool-pill, .chip, .price-card, .tst-card';
+  var cardSel = '.work-row, .cell, .approach-card, .price-card, .tst-card, .console, .demo-panel, .pipe-step';
+  var smallSel = 'a, button, input, select, .tool-pill, .chip';
   var last = null;
-  document.addEventListener('mouseover', function(e){ var el = e.target.closest(sel); if (el && el !== last){ last = el; SFX.hover(); } });
-  document.addEventListener('mouseout', function(e){ if (e.target.closest(sel) === last && !e.relatedTarget) last = null; });
+  document.addEventListener('mouseover', function(e){
+    var small = e.target.closest(smallSel);
+    var el = small || e.target.closest(cardSel);
+    if (el && el !== last){ last = el; if (small) SFX.hover(); else SFX.highlight(); }
+  });
+  document.addEventListener('mouseout', function(e){ if (!e.relatedTarget) last = null; });
   document.addEventListener('click', function(e){ if (e.target.closest('a, button')) SFX.click(); });
 })();
 
