@@ -1,19 +1,21 @@
-# Maricris Rodriguez — AI-Native Creative VA
+# Maricris Rodriguez — Remote IT Support & Microsoft 365 Administration
 
 **Live site: [crisx28.github.io](https://crisx28.github.io/)**
 
-AI-powered virtual assistant & short-form video editor. 10+ years as a Senior
-Cloud Infrastructure Engineer (SRE) — Azure, AWS, Kubernetes — now applying
-that discipline to TikTok, Instagram Reels and Facebook Reels editing, AI
-content strategy, hooks and captions.
+Fractional IT support for small businesses, MSPs, startups and remote teams.
+10+ years of enterprise IT experience — Microsoft 365, Google Workspace,
+Azure, AWS, Windows Server, Active Directory — without the cost of a
+full-time engineer.
 
-**Built on tech. Powered by creativity.**
+**Services:** Microsoft 365 & Office 365 administration · Google Workspace ·
+IT helpdesk & remote support · Cloud & infrastructure (Azure, AWS, OCI) ·
+User onboarding & offboarding · SOPs & technical documentation ·
+AI-assisted productivity (ChatGPT, Claude)
 
-- 🌊 [Scuba Snacks Sunsets](https://www.facebook.com/ScubaSnacksSunsets/) — my own content page
-- ✉️ maricris.rodriguez28@gmail.com — free 30-min discovery call
-- 📍 Philippines · working with clients worldwide
+- ✉️ maricris.rodriguez28@gmail.com — free IT assessment
+- 📍 Philippines · remote · US/EU/AU time-zone overlap · <24h response
 
 ---
 
-*This repository hosts the portfolio site (single-page, hand-built HTML/CSS/JS —
-no framework, no build step) served via GitHub Pages.*
+*This repository hosts the portfolio site (single-page, hand-built
+HTML/CSS/JS — no framework, no build step) served via GitHub Pages.*
