@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://crisx28.github.io/crisx28/sitemap.xml
+Sitemap: https://crisx28.github.io/sitemap.xml
