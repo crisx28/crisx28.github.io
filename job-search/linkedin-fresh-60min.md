@@ -47,6 +47,42 @@ https://www.linkedin.com/jobs/search/?keywords=Technical%20Support&f_TPR=r3600&f
 **One combined search (boolean keywords)**
 https://www.linkedin.com/jobs/search/?keywords=%28%22IT%20Support%22%20OR%20%22Help%20Desk%22%20OR%20%22Microsoft%20365%22%20OR%20%22Google%20Workspace%22%29&f_TPR=r3600&f_JT=P%2CC&f_WT=2&geoId=92000000&sortBy=DD
 
+> ⚠️ These use `geoId=92000000` (Worldwide), which **includes Philippines-based** remote jobs.
+> For "remote, outside the Philippines," use the per-country links in the next section instead.
+
+---
+
+## ★ GOAL: Remote jobs based OUTSIDE the Philippines
+
+`geoId` is the **job's** country, not yours. So the way to exclude the Philippines is to
+target foreign countries one at a time and never pick PH. Each link below is:
+combined keywords + **Remote** (`f_WT=2`) + **Part-time/Contract** (`f_JT=P%2CC`) +
+**newest first** (`sortBy=DD`). No time filter, so you see the latest across all dates —
+add `&f_TPR=r3600` to any of them for the last-60-min view.
+
+| Country | geoId | Ready link (remote · part-time/contract · newest first) |
+|---------|-------|----------------------------------------------------------|
+| United States | 103644278 | https://www.linkedin.com/jobs/search/?keywords=%28%22IT%20Support%22%20OR%20%22Help%20Desk%22%20OR%20%22Microsoft%20365%22%20OR%20%22Google%20Workspace%22%20OR%20%22Technical%20Support%22%29&geoId=103644278&f_WT=2&f_JT=P%2CC&sortBy=DD |
+| United Kingdom | 101165590 | https://www.linkedin.com/jobs/search/?keywords=%28%22IT%20Support%22%20OR%20%22Help%20Desk%22%20OR%20%22Microsoft%20365%22%20OR%20%22Google%20Workspace%22%20OR%20%22Technical%20Support%22%29&geoId=101165590&f_WT=2&f_JT=P%2CC&sortBy=DD |
+| Canada | 101174742 | https://www.linkedin.com/jobs/search/?keywords=%28%22IT%20Support%22%20OR%20%22Help%20Desk%22%20OR%20%22Microsoft%20365%22%20OR%20%22Google%20Workspace%22%20OR%20%22Technical%20Support%22%29&geoId=101174742&f_WT=2&f_JT=P%2CC&sortBy=DD |
+| Australia | 101452733 | https://www.linkedin.com/jobs/search/?keywords=%28%22IT%20Support%22%20OR%20%22Help%20Desk%22%20OR%20%22Microsoft%20365%22%20OR%20%22Google%20Workspace%22%20OR%20%22Technical%20Support%22%29&geoId=101452733&f_WT=2&f_JT=P%2CC&sortBy=DD |
+| Singapore | 102454443 | https://www.linkedin.com/jobs/search/?keywords=%28%22IT%20Support%22%20OR%20%22Help%20Desk%22%20OR%20%22Microsoft%20365%22%20OR%20%22Google%20Workspace%22%20OR%20%22Technical%20Support%22%29&geoId=102454443&f_WT=2&f_JT=P%2CC&sortBy=DD |
+| United Arab Emirates | 104305776 | https://www.linkedin.com/jobs/search/?keywords=%28%22IT%20Support%22%20OR%20%22Help%20Desk%22%20OR%20%22Microsoft%20365%22%20OR%20%22Google%20Workspace%22%20OR%20%22Technical%20Support%22%29&geoId=104305776&f_WT=2&f_JT=P%2CC&sortBy=DD |
+| European Union | 91000000 | https://www.linkedin.com/jobs/search/?keywords=%28%22IT%20Support%22%20OR%20%22Help%20Desk%22%20OR%20%22Microsoft%20365%22%20OR%20%22Google%20Workspace%22%20OR%20%22Technical%20Support%22%29&geoId=91000000&f_WT=2&f_JT=P%2CC&sortBy=DD |
+
+**If a geoId ever loads the wrong place:** type the country name into LinkedIn's **Location**
+box, search once, and copy the `geoId` from the resulting URL — that's always the correct code.
+Then paste your filters (`f_WT=2&f_JT=P%2CC&sortBy=DD`) onto it.
+
+### The catch LinkedIn can't filter for you
+`f_WT=2` gives *remote* roles located in that country — but many are **"Remote (US only)"**
+or region-locked and won't hire someone based in the Philippines. LinkedIn has **no filter for
+"will hire from the Philippines."** So after filtering:
+- Open the posting and look for "worldwide," "work from anywhere," "global," or an explicit
+  country restriction. Apply to the open-to-anywhere ones; skip the country-locked ones.
+- Recruiter/BPO-style listings (like Pearl Talent/Catena) that *place* PH talent abroad are
+  your best odds — they're built to hire across borders.
+
 ---
 
 ## To make it even tighter
