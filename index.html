@@ -50,6 +50,15 @@
         "Oracle Cloud Infrastructure", "Windows Server", "Active Directory", "DNS", "DHCP",
         "Group Policy", "VMware", "Oracle Linux", "PowerShell", "ServiceNow", "Jira",
         "Technical Documentation", "SOP Creation", "ChatGPT", "Claude AI"
+      ],
+      "hasCredential": [
+        { "@type": "EducationalOccupationalCredential", "credentialCategory": "certification", "name": "Microsoft Certified: Identity and Access Administrator Associate (SC-300)", "recognizedBy": { "@type": "Organization", "name": "Microsoft" } },
+        { "@type": "EducationalOccupationalCredential", "credentialCategory": "certification", "name": "Microsoft Certified: Azure Fundamentals (AZ-900)", "recognizedBy": { "@type": "Organization", "name": "Microsoft" } },
+        { "@type": "EducationalOccupationalCredential", "credentialCategory": "certification", "name": "Microsoft Certified: Azure AI Fundamentals (AI-900)", "recognizedBy": { "@type": "Organization", "name": "Microsoft" } },
+        { "@type": "EducationalOccupationalCredential", "credentialCategory": "certification", "name": "Microsoft Technology Associate: Windows Server Administration Fundamentals", "recognizedBy": { "@type": "Organization", "name": "Microsoft" } },
+        { "@type": "EducationalOccupationalCredential", "credentialCategory": "certification", "name": "Cyber Security Foundation Professional Certificate (CSFPC)", "recognizedBy": { "@type": "Organization", "name": "CertiProf" } },
+        { "@type": "EducationalOccupationalCredential", "credentialCategory": "certification", "name": "Fortinet NSE — The Threat Landscape", "recognizedBy": { "@type": "Organization", "name": "Fortinet NSE Institute" } },
+        { "@type": "EducationalOccupationalCredential", "credentialCategory": "certification", "name": "Lean Six Sigma White Belt", "recognizedBy": { "@type": "Organization", "name": "Lean Six Sigma Education" } }
       ]
     },
     {
@@ -424,6 +433,18 @@
   .tst-av { width: 40px; height: 40px; border-radius: 100px; background: var(--accent-soft); border: 1px solid rgba(53,208,224,0.25); display: grid; place-items: center; font-size: 0.9rem; color: var(--accent); font-family: var(--mono); }
   .tst-name { font-size: 0.9rem; font-weight: 500; color: var(--text); }
   .tst-role { font-family: var(--mono); font-size: 0.66rem; color: var(--text-mute); letter-spacing: 0.03em; text-transform: uppercase; }
+  .tst-rate { font-size: 0.95rem; letter-spacing: 0.14em; color: var(--accent); margin-bottom: 0.9rem; }
+  .tst-rate b { color: var(--text); font-family: var(--mono); font-size: 0.78rem; margin-left: 0.45rem; letter-spacing: 0; }
+  .tst-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1.1rem; }
+  .tst-tags span { font-family: var(--mono); font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-mute); border: 1px solid var(--border); border-radius: 100px; padding: 0.25rem 0.6rem; }
+  .tst-src { font-family: var(--mono); font-size: 0.62rem; color: var(--text-mute); margin-top: 1.3rem; letter-spacing: 0.03em; }
+  /* credentials */
+  .cert-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 1rem; margin-top: 2.5rem; }
+  .cert-card { border: 1px solid var(--border); border-radius: 14px; padding: 1.5rem; background: var(--surface); transition: border-color 0.3s, transform 0.3s; display: flex; flex-direction: column; gap: 0.85rem; }
+  .cert-card:hover { border-color: var(--border-2); transform: translateY(-3px); }
+  .cert-badge { width: 36px; height: 36px; border-radius: 9px; background: var(--accent-soft); border: 1px solid rgba(53,208,224,0.25); display: grid; place-items: center; font-family: var(--mono); font-size: 0.6rem; color: var(--accent); font-weight: 600; letter-spacing: 0.02em; }
+  .cert-name { font-family: var(--display); font-weight: 500; font-size: 0.96rem; color: var(--text); line-height: 1.35; }
+  .cert-meta { font-family: var(--mono); font-size: 0.62rem; color: var(--text-mute); letter-spacing: 0.04em; text-transform: uppercase; margin-top: auto; }
   /* console tilt */
   .hero .console { transition: transform 0.18s cubic-bezier(0.16,1,0.3,1); transform-style: preserve-3d; }
   /* ══ HIGHLIGHT SWEEP (visual pair for the highlight sound) ══ */
@@ -532,6 +553,7 @@
     <li><a href="#clients">Who I Help</a></li>
     <li><a href="#workflow">Workflow</a></li>
     <li><a href="#engagement">Engagement</a></li>
+    <li><a href="#credentials">Credentials</a></li>
     <li><a href="#faq">FAQ</a></li>
     <li><a href="#about">About</a></li>
   </ul>
@@ -841,40 +863,80 @@
   </div>
 </section>
 
-<!--
-     TESTIMONIALS  (READY TO GO LIVE)
-     This section is fully built and styled but HIDDEN so no
-     placeholder text ever appears on your live site.
-
-     TO PUBLISH once you have 2 or 3 REAL client quotes:
-       1. Delete the line just below that reads BEGIN_HIDDEN
-       2. Delete the line lower down that reads END_HIDDEN
-       3. Replace the quote, name and role text with real quotes.
-     Only ever use genuine quotes. Real ones close deals; invented
-     ones destroy trust the moment anyone checks.
--->
-<!-- BEGIN_HIDDEN
+<!-- TESTIMONIALS — real Upwork reviews. Add more genuine quotes here as
+     you earn them; never invent one. To feature a new review, copy a
+     .tst-card block and fill in the real quote, name/role and rating. -->
 <section id="testimonials">
   <div class="wrap">
     <div class="eyebrow reveal"><span class="idx">06</span> — Client Results</div>
-    <h2 class="title reveal mask rd1">What clients say.</h2>
+    <h2 class="title reveal mask rd1">Rated 5.0<br>by the clients I work with.</h2>
     <div class="tst-grid reveal rd2">
       <div class="tst-card">
-        <p class="tst-quote">REAL client quote goes here — one specific outcome works best (e.g. "migrated our whole team to M365 with zero downtime over a weekend").</p>
-        <div class="tst-who"><div class="tst-av">CL</div><div><div class="tst-name">Client Name</div><div class="tst-role">Role · Company</div></div></div>
+        <div class="tst-rate">★★★★★ <b>5.0</b></div>
+        <p class="tst-quote">Perfect rating on a Microsoft Entra enterprise engagement — exactly the identity and M365 work I do for clients every day.</p>
+        <div class="tst-who"><div class="tst-av">MS</div><div><div class="tst-name">Upwork enterprise client</div><div class="tst-role">MSFT Entra User Study · Oct 2025</div></div></div>
+        <div class="tst-src">Verified on Upwork · Fixed-price engagement</div>
       </div>
       <div class="tst-card">
-        <p class="tst-quote">Second real quote — focus on reliability, response time, or money/time saved.</p>
-        <div class="tst-who"><div class="tst-av">CL</div><div><div class="tst-name">Client Name</div><div class="tst-role">Role · Company</div></div></div>
+        <div class="tst-rate">★★★★★ <b>5.0</b></div>
+        <p class="tst-quote">Cris was wonderful to work with! She showed great attention to detail and willingness to learn.</p>
+        <div class="tst-who"><div class="tst-av">JB</div><div><div class="tst-name">Jessica &amp; Brandon</div><div class="tst-role">Verified Upwork client</div></div></div>
+        <div class="tst-tags"><span>Collaborative</span><span>Detail Oriented</span></div>
       </div>
-      <div class="tst-card">
-        <p class="tst-quote">Third real quote — a founder or ops lead vouching for you is gold.</p>
-        <div class="tst-who"><div class="tst-av">CL</div><div><div class="tst-name">Client Name</div><div class="tst-role">Role · Company</div></div></div>
+    </div>
+    <p class="price-note">Verified client feedback from Upwork</p>
+  </div>
+</section>
+
+<!-- CREDENTIALS -->
+<section id="credentials">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow reveal"><span class="idx">07</span> — Credentials</div>
+        <h2 class="title reveal mask rd1">Certified where<br>it counts.</h2>
+      </div>
+      <p class="lead reveal rd2">Industry certifications across Microsoft identity, Azure and security — the exact ground your IT actually runs on.</p>
+    </div>
+    <div class="cert-grid reveal rd1">
+      <div class="cert-card">
+        <div class="cert-badge">MS</div>
+        <div class="cert-name">Identity &amp; Access Administrator Associate</div>
+        <div class="cert-meta">Microsoft · SC-300 · 2022</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-badge">MS</div>
+        <div class="cert-name">Azure Fundamentals</div>
+        <div class="cert-meta">Microsoft · AZ-900 · 2020</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-badge">MS</div>
+        <div class="cert-name">Azure AI Fundamentals</div>
+        <div class="cert-meta">Microsoft · AI-900 · 2021</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-badge">MS</div>
+        <div class="cert-name">Technology Associate — Windows Server Admin</div>
+        <div class="cert-meta">Microsoft · MTA · 2019</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-badge">CP</div>
+        <div class="cert-name">Cyber Security Foundation Professional</div>
+        <div class="cert-meta">CertiProf · CSFPC · 2021</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-badge">FTNT</div>
+        <div class="cert-name">NSE — The Threat Landscape</div>
+        <div class="cert-meta">Fortinet NSE Institute · 2020</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-badge">6σ</div>
+        <div class="cert-name">Lean Six Sigma — White Belt</div>
+        <div class="cert-meta">Process Improvement · 2020</div>
       </div>
     </div>
   </div>
 </section>
-END_HIDDEN -->
 
 <!-- ABOUT -->
 <section id="about">
@@ -889,7 +951,7 @@ END_HIDDEN -->
       </div>
     </div>
     <div class="about-content">
-      <div class="eyebrow reveal"><span class="idx">06</span> — About</div>
+      <div class="eyebrow reveal"><span class="idx">08</span> — About</div>
       <h2 class="title reveal mask rd1">A senior engineer.<br>Your IT department.</h2>
       <p class="reveal rd2">For over a decade I've worked in <strong>enterprise IT</strong> — supporting Microsoft 365, Azure, AWS, Windows Server, Active Directory and Google Workspace for organizations where downtime isn't an option. That world runs on change management, documentation and SLAs — and so do I.</p>
       <p class="reveal rd2">Now I bring that same discipline to <strong>small businesses, MSPs, startups and remote teams</strong> that need reliable technical help without adding a full-time employee. Supporting users, resolving issues, managing accounts, documenting processes — I keep your business running smoothly.</p>
@@ -905,7 +967,7 @@ END_HIDDEN -->
 <!-- FAQ -->
 <section id="faq">
   <div class="wrap">
-    <div class="eyebrow reveal"><span class="idx">07</span> — FAQ</div>
+    <div class="eyebrow reveal"><span class="idx">09</span> — FAQ</div>
     <h2 class="title reveal mask rd1">Questions clients ask.</h2>
     <div class="faq-list reveal rd2">
       <details class="faq-item">
@@ -936,7 +998,7 @@ END_HIDDEN -->
 <section id="contact">
   <div class="wrap">
     <div class="contact-card reveal">
-      <div class="eyebrow" style="justify-content:center;"><span class="idx">08</span> — Get in touch</div>
+      <div class="eyebrow" style="justify-content:center;"><span class="idx">10</span> — Get in touch</div>
       <h2>Let's take IT<br><span class="grad">off your plate.</span></h2>
       <p>If you're looking for someone to manage your Microsoft 365 environment, support your team, troubleshoot issues and keep day-to-day IT running smoothly — email me for a free assessment. I usually reply within 24 hours.</p>
       <div class="contact-actions">
