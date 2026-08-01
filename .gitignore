@@ -1,0 +1,32 @@
+# --- Secrets: NEVER commit these ---
+# API keys, tokens and credentials belong in .env, and .env stays local.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets.json
+credentials.json
+
+# --- Dependencies ---
+node_modules/
+vendor/
+
+# --- Build output / caches ---
+dist/
+build/
+.cache/
+.vite/
+.next/
+.parcel-cache/
+
+# --- OS / editor junk ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# --- Logs ---
+*.log
+npm-debug.log*

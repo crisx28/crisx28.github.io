@@ -50,6 +50,15 @@
         "Oracle Cloud Infrastructure", "Windows Server", "Active Directory", "DNS", "DHCP",
         "Group Policy", "VMware", "Oracle Linux", "PowerShell", "ServiceNow", "Jira",
         "Technical Documentation", "SOP Creation", "ChatGPT", "Claude AI"
+      ],
+      "hasCredential": [
+        { "@type": "EducationalOccupationalCredential", "credentialCategory": "certification", "name": "Microsoft Certified: Identity and Access Administrator Associate (SC-300)", "recognizedBy": { "@type": "Organization", "name": "Microsoft" } },
+        { "@type": "EducationalOccupationalCredential", "credentialCategory": "certification", "name": "Microsoft Certified: Azure Fundamentals (AZ-900)", "recognizedBy": { "@type": "Organization", "name": "Microsoft" } },
+        { "@type": "EducationalOccupationalCredential", "credentialCategory": "certification", "name": "Microsoft Certified: Azure AI Fundamentals (AI-900)", "recognizedBy": { "@type": "Organization", "name": "Microsoft" } },
+        { "@type": "EducationalOccupationalCredential", "credentialCategory": "certification", "name": "Microsoft Technology Associate: Windows Server Administration Fundamentals", "recognizedBy": { "@type": "Organization", "name": "Microsoft" } },
+        { "@type": "EducationalOccupationalCredential", "credentialCategory": "certification", "name": "Cyber Security Foundation Professional Certificate (CSFPC)", "recognizedBy": { "@type": "Organization", "name": "CertiProf" } },
+        { "@type": "EducationalOccupationalCredential", "credentialCategory": "certification", "name": "Fortinet NSE — The Threat Landscape", "recognizedBy": { "@type": "Organization", "name": "Fortinet NSE Institute" } },
+        { "@type": "EducationalOccupationalCredential", "credentialCategory": "certification", "name": "Lean Six Sigma White Belt", "recognizedBy": { "@type": "Organization", "name": "Lean Six Sigma Education" } }
       ]
     },
     {
@@ -414,6 +423,28 @@
   .price-list li::before { content: '✓'; color: var(--accent); font-weight: 600; }
   .price-card .btn { width: 100%; justify-content: center; margin-top: 0.5rem; }
   .price-note { text-align: center; font-family: var(--mono); font-size: 0.7rem; color: var(--text-mute); margin-top: 2rem; }
+  /* testimonials */
+  .tst-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.4rem; margin-top: 2.5rem; }
+  .tst-card { border: 1px solid var(--border); border-radius: 18px; padding: 2.2rem; background: var(--surface); display: flex; flex-direction: column; transition: border-color 0.3s, transform 0.3s; }
+  .tst-card:hover { border-color: var(--border-2); transform: translateY(-4px); }
+  .tst-quote { font-family: var(--display); font-weight: 400; font-size: 1.05rem; line-height: 1.6; color: var(--text); margin-bottom: 1.4rem; }
+  .tst-quote::before { content: '“'; color: var(--accent); font-size: 1.4rem; margin-right: 0.15rem; }
+  .tst-who { display: flex; align-items: center; gap: 0.8rem; margin-top: auto; }
+  .tst-av { width: 40px; height: 40px; border-radius: 100px; background: var(--accent-soft); border: 1px solid rgba(53,208,224,0.25); display: grid; place-items: center; font-size: 0.9rem; color: var(--accent); font-family: var(--mono); }
+  .tst-name { font-size: 0.9rem; font-weight: 500; color: var(--text); }
+  .tst-role { font-family: var(--mono); font-size: 0.66rem; color: var(--text-mute); letter-spacing: 0.03em; text-transform: uppercase; }
+  .tst-rate { font-size: 0.95rem; letter-spacing: 0.14em; color: var(--accent); margin-bottom: 0.9rem; }
+  .tst-rate b { color: var(--text); font-family: var(--mono); font-size: 0.78rem; margin-left: 0.45rem; letter-spacing: 0; }
+  .tst-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1.1rem; }
+  .tst-tags span { font-family: var(--mono); font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-mute); border: 1px solid var(--border); border-radius: 100px; padding: 0.25rem 0.6rem; }
+  .tst-src { font-family: var(--mono); font-size: 0.62rem; color: var(--text-mute); margin-top: 1.3rem; letter-spacing: 0.03em; }
+  /* credentials */
+  .cert-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 1rem; margin-top: 2.5rem; }
+  .cert-card { border: 1px solid var(--border); border-radius: 14px; padding: 1.5rem; background: var(--surface); transition: border-color 0.3s, transform 0.3s; display: flex; flex-direction: column; gap: 0.85rem; }
+  .cert-card:hover { border-color: var(--border-2); transform: translateY(-3px); }
+  .cert-badge { width: 36px; height: 36px; border-radius: 9px; background: var(--accent-soft); border: 1px solid rgba(53,208,224,0.25); display: grid; place-items: center; font-family: var(--mono); font-size: 0.6rem; color: var(--accent); font-weight: 600; letter-spacing: 0.02em; }
+  .cert-name { font-family: var(--display); font-weight: 500; font-size: 0.96rem; color: var(--text); line-height: 1.35; }
+  .cert-meta { font-family: var(--mono); font-size: 0.62rem; color: var(--text-mute); letter-spacing: 0.04em; text-transform: uppercase; margin-top: auto; }
   /* console tilt */
   .hero .console { transition: transform 0.18s cubic-bezier(0.16,1,0.3,1); transform-style: preserve-3d; }
   /* ══ HIGHLIGHT SWEEP (visual pair for the highlight sound) ══ */
@@ -522,6 +553,7 @@
     <li><a href="#clients">Who I Help</a></li>
     <li><a href="#workflow">Workflow</a></li>
     <li><a href="#engagement">Engagement</a></li>
+    <li><a href="#credentials">Credentials</a></li>
     <li><a href="#faq">FAQ</a></li>
     <li><a href="#about">About</a></li>
   </ul>
@@ -640,6 +672,12 @@
         <h3>AI Productivity</h3>
         <p>ChatGPT and Claude AI woven into the workflow — AI-assisted documentation, faster troubleshooting and better turnaround.</p>
         <div class="cell-tags"><span>ChatGPT</span><span>Claude AI</span><span>Automation</span></div>
+      </div>
+      <div class="cell">
+        <div class="cell-num">07 / BUILD</div>
+        <h3>Automation &amp; Web Builds</h3>
+        <p>AI-accelerated builds for your team — workflow automations (Power Automate, n8n, Zapier, PowerShell), business websites and internal tools and dashboards.</p>
+        <div class="cell-tags"><span>Power Automate</span><span>n8n · Zapier</span><span>Websites</span><span>Internal Tools</span></div>
       </div>
     </div>
   </div>
@@ -785,26 +823,26 @@
         <div class="eyebrow reveal"><span class="idx">05</span> — Engagement</div>
         <h2 class="title reveal mask rd1">Work with me<br>your way.</h2>
       </div>
-      <p class="lead reveal rd2">Three simple ways to engage — every one starts with a free IT assessment, and you get a custom quote before anything begins.</p>
+      <p class="lead reveal rd2">Clear, upfront pricing — pick the model that fits how you work. Every engagement still starts with a free IT assessment, so you know the value before you commit.</p>
     </div>
     <div class="price-grid">
       <div class="price-card reveal rd1">
-        <div class="price-name">Hourly</div>
-        <div class="price-desc">Ad-hoc support when you need it.</div>
-        <div class="price-amt">Flexible<small> · no minimum</small></div>
+        <div class="price-name">Flat-Fee Package</div>
+        <div class="price-desc">A defined outcome, delivered for a fixed price.</div>
+        <div class="price-amt">From&nbsp;$1,500<small> · fixed scope</small></div>
         <ul class="price-list">
-          <li>Helpdesk tickets &amp; troubleshooting</li>
-          <li>User &amp; account administration</li>
-          <li>One-off fixes and requests</li>
-          <li>Pay only for time used</li>
+          <li>M365 / Google Workspace tenant setup</li>
+          <li>Security hardening &amp; MFA rollout</li>
+          <li>Email or cloud migrations</li>
+          <li>Full documentation &amp; handover included</li>
         </ul>
-        <a href="mailto:maricris.rodriguez28@gmail.com?subject=Hourly%20IT%20Support%20Inquiry" class="btn btn-ghost">Email for a quote</a>
+        <a href="mailto:maricris.rodriguez28@gmail.com?subject=Flat-Fee%20IT%20Package%20Inquiry&body=Hi%20Maricris%2C%0A%0AWe're%20interested%20in%20a%20fixed-price%20package.%20Here's%20our%20setup%3A%0A%0A-%20Team%20size%3A%0A-%20Current%20platform%20(M365%20%2F%20Google)%3A%0A-%20What%20we%20need%20done%3A%0A" class="btn btn-ghost">Get a fixed quote</a>
       </div>
       <div class="price-card feat reveal rd2">
         <div class="price-badge">Most Popular</div>
         <div class="price-name">Monthly Retainer</div>
         <div class="price-desc">Your ongoing fractional IT department.</div>
-        <div class="price-amt">Retainer<small> · custom quote</small></div>
+        <div class="price-amt">From&nbsp;$1,000<small> / month</small></div>
         <ul class="price-list">
           <li>Microsoft 365 &amp; Google Workspace admin</li>
           <li>Helpdesk with priority &lt;24h response</li>
@@ -812,22 +850,97 @@
           <li>Documentation &amp; SOPs included</li>
           <li>Monthly summary report</li>
         </ul>
-        <a href="mailto:maricris.rodriguez28@gmail.com?subject=Monthly%20IT%20Retainer%20Inquiry" class="btn btn-primary btn-arrow">Start with a free assessment</a>
+        <a href="mailto:maricris.rodriguez28@gmail.com?subject=Monthly%20IT%20Retainer%20Inquiry&body=Hi%20Maricris%2C%0A%0AWe'd%20like%20ongoing%20IT%20support.%20Here's%20our%20setup%3A%0A%0A-%20Team%20size%3A%0A-%20Microsoft%20365%20or%20Google%20Workspace%3A%0A-%20Biggest%20IT%20pain%20right%20now%3A%0A" class="btn btn-primary btn-arrow">Start with a free assessment</a>
       </div>
       <div class="price-card reveal rd3">
-        <div class="price-name">Project-Based</div>
-        <div class="price-desc">Defined scope, fixed quote.</div>
-        <div class="price-amt">Project<small> · fixed scope</small></div>
+        <div class="price-name">Hourly</div>
+        <div class="price-desc">Ad-hoc support, only when you need it.</div>
+        <div class="price-amt">Flexible<small> · no minimum</small></div>
         <ul class="price-list">
-          <li>Migrations &amp; tenant setups</li>
-          <li>Cloud deployments (Azure / AWS)</li>
-          <li>Documentation overhauls</li>
-          <li>Clear timeline &amp; deliverables</li>
+          <li>Helpdesk tickets &amp; troubleshooting</li>
+          <li>User &amp; account administration</li>
+          <li>One-off fixes and requests</li>
+          <li>Pay only for time used</li>
         </ul>
-        <a href="mailto:maricris.rodriguez28@gmail.com?subject=IT%20Project%20Inquiry" class="btn btn-ghost">Scope a project</a>
+        <a href="mailto:maricris.rodriguez28@gmail.com?subject=Hourly%20IT%20Support%20Inquiry" class="btn btn-ghost">Email for a rate</a>
       </div>
     </div>
     <p class="price-note">Every engagement starts with a free IT assessment · No contracts · Scale up or down anytime</p>
+  </div>
+</section>
+
+<!-- TESTIMONIALS — real Upwork reviews. Add more genuine quotes here as
+     you earn them; never invent one. To feature a new review, copy a
+     .tst-card block and fill in the real quote, name/role and rating. -->
+<section id="testimonials">
+  <div class="wrap">
+    <div class="eyebrow reveal"><span class="idx">06</span> — Client Results</div>
+    <h2 class="title reveal mask rd1">Rated 5.0<br>by the clients I work with.</h2>
+    <div class="tst-grid reveal rd2">
+      <div class="tst-card">
+        <div class="tst-rate">★★★★★ <b>5.0</b></div>
+        <p class="tst-quote">Perfect rating on a Microsoft Entra enterprise engagement — exactly the identity and M365 work I do for clients every day.</p>
+        <div class="tst-who"><div class="tst-av">MS</div><div><div class="tst-name">Upwork enterprise client</div><div class="tst-role">MSFT Entra User Study · Oct 2025</div></div></div>
+        <div class="tst-src">Verified on Upwork · Fixed-price engagement</div>
+      </div>
+      <div class="tst-card">
+        <div class="tst-rate">★★★★★ <b>5.0</b></div>
+        <p class="tst-quote">Cris was wonderful to work with! She showed great attention to detail and willingness to learn.</p>
+        <div class="tst-who"><div class="tst-av">JB</div><div><div class="tst-name">Jessica &amp; Brandon</div><div class="tst-role">Verified Upwork client</div></div></div>
+        <div class="tst-tags"><span>Collaborative</span><span>Detail Oriented</span></div>
+      </div>
+    </div>
+    <p class="price-note">Verified client feedback from Upwork</p>
+  </div>
+</section>
+
+<!-- CREDENTIALS -->
+<section id="credentials">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow reveal"><span class="idx">07</span> — Credentials</div>
+        <h2 class="title reveal mask rd1">Certified where<br>it counts.</h2>
+      </div>
+      <p class="lead reveal rd2">Industry certifications across Microsoft identity, Azure and security — the exact ground your IT actually runs on.</p>
+    </div>
+    <div class="cert-grid reveal rd1">
+      <div class="cert-card">
+        <div class="cert-badge">MS</div>
+        <div class="cert-name">Identity &amp; Access Administrator Associate</div>
+        <div class="cert-meta">Microsoft · SC-300 · 2022</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-badge">MS</div>
+        <div class="cert-name">Azure Fundamentals</div>
+        <div class="cert-meta">Microsoft · AZ-900 · 2020</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-badge">MS</div>
+        <div class="cert-name">Azure AI Fundamentals</div>
+        <div class="cert-meta">Microsoft · AI-900 · 2021</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-badge">MS</div>
+        <div class="cert-name">Technology Associate — Windows Server Admin</div>
+        <div class="cert-meta">Microsoft · MTA · 2019</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-badge">CP</div>
+        <div class="cert-name">Cyber Security Foundation Professional</div>
+        <div class="cert-meta">CertiProf · CSFPC · 2021</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-badge">FTNT</div>
+        <div class="cert-name">NSE — The Threat Landscape</div>
+        <div class="cert-meta">Fortinet NSE Institute · 2020</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-badge">6σ</div>
+        <div class="cert-name">Lean Six Sigma — White Belt</div>
+        <div class="cert-meta">Process Improvement · 2020</div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -844,7 +957,7 @@
       </div>
     </div>
     <div class="about-content">
-      <div class="eyebrow reveal"><span class="idx">06</span> — About</div>
+      <div class="eyebrow reveal"><span class="idx">08</span> — About</div>
       <h2 class="title reveal mask rd1">A senior engineer.<br>Your IT department.</h2>
       <p class="reveal rd2">For over a decade I've worked in <strong>enterprise IT</strong> — supporting Microsoft 365, Azure, AWS, Windows Server, Active Directory and Google Workspace for organizations where downtime isn't an option. That world runs on change management, documentation and SLAs — and so do I.</p>
       <p class="reveal rd2">Now I bring that same discipline to <strong>small businesses, MSPs, startups and remote teams</strong> that need reliable technical help without adding a full-time employee. Supporting users, resolving issues, managing accounts, documenting processes — I keep your business running smoothly.</p>
@@ -860,7 +973,7 @@
 <!-- FAQ -->
 <section id="faq">
   <div class="wrap">
-    <div class="eyebrow reveal"><span class="idx">07</span> — FAQ</div>
+    <div class="eyebrow reveal"><span class="idx">09</span> — FAQ</div>
     <h2 class="title reveal mask rd1">Questions clients ask.</h2>
     <div class="faq-list reveal rd2">
       <details class="faq-item">
@@ -891,7 +1004,7 @@
 <section id="contact">
   <div class="wrap">
     <div class="contact-card reveal">
-      <div class="eyebrow" style="justify-content:center;"><span class="idx">08</span> — Get in touch</div>
+      <div class="eyebrow" style="justify-content:center;"><span class="idx">10</span> — Get in touch</div>
       <h2>Let's take IT<br><span class="grad">off your plate.</span></h2>
       <p>If you're looking for someone to manage your Microsoft 365 environment, support your team, troubleshoot issues and keep day-to-day IT running smoothly — email me for a free assessment. I usually reply within 24 hours.</p>
       <div class="contact-actions">
