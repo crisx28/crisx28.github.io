@@ -414,6 +414,16 @@
   .price-list li::before { content: '✓'; color: var(--accent); font-weight: 600; }
   .price-card .btn { width: 100%; justify-content: center; margin-top: 0.5rem; }
   .price-note { text-align: center; font-family: var(--mono); font-size: 0.7rem; color: var(--text-mute); margin-top: 2rem; }
+  /* testimonials */
+  .tst-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.4rem; margin-top: 2.5rem; }
+  .tst-card { border: 1px solid var(--border); border-radius: 18px; padding: 2.2rem; background: var(--surface); display: flex; flex-direction: column; transition: border-color 0.3s, transform 0.3s; }
+  .tst-card:hover { border-color: var(--border-2); transform: translateY(-4px); }
+  .tst-quote { font-family: var(--display); font-weight: 400; font-size: 1.05rem; line-height: 1.6; color: var(--text); margin-bottom: 1.4rem; }
+  .tst-quote::before { content: '“'; color: var(--accent); font-size: 1.4rem; margin-right: 0.15rem; }
+  .tst-who { display: flex; align-items: center; gap: 0.8rem; margin-top: auto; }
+  .tst-av { width: 40px; height: 40px; border-radius: 100px; background: var(--accent-soft); border: 1px solid rgba(53,208,224,0.25); display: grid; place-items: center; font-size: 0.9rem; color: var(--accent); font-family: var(--mono); }
+  .tst-name { font-size: 0.9rem; font-weight: 500; color: var(--text); }
+  .tst-role { font-family: var(--mono); font-size: 0.66rem; color: var(--text-mute); letter-spacing: 0.03em; text-transform: uppercase; }
   /* console tilt */
   .hero .console { transition: transform 0.18s cubic-bezier(0.16,1,0.3,1); transform-style: preserve-3d; }
   /* ══ HIGHLIGHT SWEEP (visual pair for the highlight sound) ══ */
@@ -785,26 +795,26 @@
         <div class="eyebrow reveal"><span class="idx">05</span> — Engagement</div>
         <h2 class="title reveal mask rd1">Work with me<br>your way.</h2>
       </div>
-      <p class="lead reveal rd2">Three simple ways to engage — every one starts with a free IT assessment, and you get a custom quote before anything begins.</p>
+      <p class="lead reveal rd2">Clear, upfront pricing — pick the model that fits how you work. Every engagement still starts with a free IT assessment, so you know the value before you commit.</p>
     </div>
     <div class="price-grid">
       <div class="price-card reveal rd1">
-        <div class="price-name">Hourly</div>
-        <div class="price-desc">Ad-hoc support when you need it.</div>
-        <div class="price-amt">Flexible<small> · no minimum</small></div>
+        <div class="price-name">Flat-Fee Package</div>
+        <div class="price-desc">A defined outcome, delivered for a fixed price.</div>
+        <div class="price-amt">From&nbsp;$1,500<small> · fixed scope</small></div>
         <ul class="price-list">
-          <li>Helpdesk tickets &amp; troubleshooting</li>
-          <li>User &amp; account administration</li>
-          <li>One-off fixes and requests</li>
-          <li>Pay only for time used</li>
+          <li>M365 / Google Workspace tenant setup</li>
+          <li>Security hardening &amp; MFA rollout</li>
+          <li>Email or cloud migrations</li>
+          <li>Full documentation &amp; handover included</li>
         </ul>
-        <a href="mailto:maricris.rodriguez28@gmail.com?subject=Hourly%20IT%20Support%20Inquiry" class="btn btn-ghost">Email for a quote</a>
+        <a href="mailto:maricris.rodriguez28@gmail.com?subject=Flat-Fee%20IT%20Package%20Inquiry&body=Hi%20Maricris%2C%0A%0AWe're%20interested%20in%20a%20fixed-price%20package.%20Here's%20our%20setup%3A%0A%0A-%20Team%20size%3A%0A-%20Current%20platform%20(M365%20%2F%20Google)%3A%0A-%20What%20we%20need%20done%3A%0A" class="btn btn-ghost">Get a fixed quote</a>
       </div>
       <div class="price-card feat reveal rd2">
         <div class="price-badge">Most Popular</div>
         <div class="price-name">Monthly Retainer</div>
         <div class="price-desc">Your ongoing fractional IT department.</div>
-        <div class="price-amt">Retainer<small> · custom quote</small></div>
+        <div class="price-amt">From&nbsp;$1,000<small> / month</small></div>
         <ul class="price-list">
           <li>Microsoft 365 &amp; Google Workspace admin</li>
           <li>Helpdesk with priority &lt;24h response</li>
@@ -812,24 +822,59 @@
           <li>Documentation &amp; SOPs included</li>
           <li>Monthly summary report</li>
         </ul>
-        <a href="mailto:maricris.rodriguez28@gmail.com?subject=Monthly%20IT%20Retainer%20Inquiry" class="btn btn-primary btn-arrow">Start with a free assessment</a>
+        <a href="mailto:maricris.rodriguez28@gmail.com?subject=Monthly%20IT%20Retainer%20Inquiry&body=Hi%20Maricris%2C%0A%0AWe'd%20like%20ongoing%20IT%20support.%20Here's%20our%20setup%3A%0A%0A-%20Team%20size%3A%0A-%20Microsoft%20365%20or%20Google%20Workspace%3A%0A-%20Biggest%20IT%20pain%20right%20now%3A%0A" class="btn btn-primary btn-arrow">Start with a free assessment</a>
       </div>
       <div class="price-card reveal rd3">
-        <div class="price-name">Project-Based</div>
-        <div class="price-desc">Defined scope, fixed quote.</div>
-        <div class="price-amt">Project<small> · fixed scope</small></div>
+        <div class="price-name">Hourly</div>
+        <div class="price-desc">Ad-hoc support, only when you need it.</div>
+        <div class="price-amt">Flexible<small> · no minimum</small></div>
         <ul class="price-list">
-          <li>Migrations &amp; tenant setups</li>
-          <li>Cloud deployments (Azure / AWS)</li>
-          <li>Documentation overhauls</li>
-          <li>Clear timeline &amp; deliverables</li>
+          <li>Helpdesk tickets &amp; troubleshooting</li>
+          <li>User &amp; account administration</li>
+          <li>One-off fixes and requests</li>
+          <li>Pay only for time used</li>
         </ul>
-        <a href="mailto:maricris.rodriguez28@gmail.com?subject=IT%20Project%20Inquiry" class="btn btn-ghost">Scope a project</a>
+        <a href="mailto:maricris.rodriguez28@gmail.com?subject=Hourly%20IT%20Support%20Inquiry" class="btn btn-ghost">Email for a rate</a>
       </div>
     </div>
     <p class="price-note">Every engagement starts with a free IT assessment · No contracts · Scale up or down anytime</p>
   </div>
 </section>
+
+<!--
+     TESTIMONIALS  (READY TO GO LIVE)
+     This section is fully built and styled but HIDDEN so no
+     placeholder text ever appears on your live site.
+
+     TO PUBLISH once you have 2 or 3 REAL client quotes:
+       1. Delete the line just below that reads BEGIN_HIDDEN
+       2. Delete the line lower down that reads END_HIDDEN
+       3. Replace the quote, name and role text with real quotes.
+     Only ever use genuine quotes. Real ones close deals; invented
+     ones destroy trust the moment anyone checks.
+-->
+<!-- BEGIN_HIDDEN
+<section id="testimonials">
+  <div class="wrap">
+    <div class="eyebrow reveal"><span class="idx">06</span> — Client Results</div>
+    <h2 class="title reveal mask rd1">What clients say.</h2>
+    <div class="tst-grid reveal rd2">
+      <div class="tst-card">
+        <p class="tst-quote">REAL client quote goes here — one specific outcome works best (e.g. "migrated our whole team to M365 with zero downtime over a weekend").</p>
+        <div class="tst-who"><div class="tst-av">CL</div><div><div class="tst-name">Client Name</div><div class="tst-role">Role · Company</div></div></div>
+      </div>
+      <div class="tst-card">
+        <p class="tst-quote">Second real quote — focus on reliability, response time, or money/time saved.</p>
+        <div class="tst-who"><div class="tst-av">CL</div><div><div class="tst-name">Client Name</div><div class="tst-role">Role · Company</div></div></div>
+      </div>
+      <div class="tst-card">
+        <p class="tst-quote">Third real quote — a founder or ops lead vouching for you is gold.</p>
+        <div class="tst-who"><div class="tst-av">CL</div><div><div class="tst-name">Client Name</div><div class="tst-role">Role · Company</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+END_HIDDEN -->
 
 <!-- ABOUT -->
 <section id="about">
